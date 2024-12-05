@@ -1,0 +1,64 @@
+<!-- Padding - Border - Margin -->
+<!-- Margin giúp tạo khoảng trống giữa các phần tử và nó không làm tăng kích thước -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Padding</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+
+        <style>
+            .box{
+                width: 60px;
+                height: 60px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                /* float: left là dịch chuyển các phần tử thành hàng ngang */
+            }
+            .box1{
+                background-color: red;
+            }
+
+            .box2{
+                background-color: blue;
+            }
+
+            /* padding có nghĩa là phần đệm thêm vào 
+            có tất cả 4 hướng top, right, bottom, left.
+            Khi chúng ta viết tắt các hướng thì nó sẽ thực hiện theo thứ tự như trên */
+            .box3{
+                background-color: green;
+                /* Nếu padding có 1 giá trị có nghĩa là cả 4 hướng đều được đệm thêm vào
+                Nếu padding có 2 giá trị thì (top, bottom) một kiểu - (right, left) một kiểu
+                Nếu có 3 giá trị thì top đến (right, left) đến bottom */
+                padding: 10px;
+            }
+
+            .box3{
+                /* Viết nhanh:
+                border: 10px solid #333; */
+
+                border-width: 10px;
+                /* Chú ý là mặc định kiểu solid cũng có width = 2px */
+                border-style: solid;
+                border-color: #333;
+            }
+
+            /* Viết nhanh của margin giống như padding */
+            .box3{
+                margin-top: 20px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+            <div class="box box1">Box 1</div>
+            <div class="box box2">Box 2</div>
+            <div class="box box3">Box 3</div>
+        </div>
+    </body>
+</html>

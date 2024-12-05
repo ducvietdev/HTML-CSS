@@ -1,0 +1,27 @@
+@media (max-width: 1200px) {
+    #check-main {
+        max-width: 100%;
+    }
+
+    .check-content {
+        max-width: 100%;
+        margin-left: -100px;
+    }
+
+    .check-list {
+        max-width: 100%;
+        position: absolute;
+        left: 0;
+        bottom: 40%;   
+    }
+}
+
+@media (max-width: 1000px) {
+    .portfolio-container {
+        width: 780px;
+    }
+
+    .portfolio-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

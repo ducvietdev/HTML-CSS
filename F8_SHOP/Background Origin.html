@@ -1,0 +1,31 @@
+<!-- Giống như Background Clip nhưng Background Origin chỉ dùng cho Image -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đệm, viền và khoảng lề</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            html, body{
+                margin: 0;
+            }
+
+            .header{
+                width: 100%;
+                height: 100vh;
+                background-image: 
+                url(https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-g%C3%A1i-%C4%91%E1%BA%B9p-cute-819x1024.jpg);
+                background-size: 100%;
+                background-repeat: no-repeat;
+                border: 10px dashed #ccc;
+                padding: 10px;
+                box-sizing: border-box;
+                background-origin: padding-box;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+    </body>
+</html>

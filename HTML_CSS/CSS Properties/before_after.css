@@ -1,0 +1,74 @@
+span {
+    user-select: none;
+}
+
+/* .heading::before {
+    content: "New";
+}
+
+.heading::after {
+    content: "Dress";
+} */
+
+.heading {
+    /* Bởi vì thẻ div nó có thuộc tính block */
+    display: inline-block;
+    position: relative;
+    /* Giống như right: -10px */
+    /* padding-right: 10px; */
+}
+
+/* .before {
+    margin-right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+} */
+
+.heading::before {
+    content: "";
+    top: 50%;
+    transform: translateY(-50%);
+    right: -10px;
+    position: absolute;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: red;
+}
+
+
+/* Circle */
+
+body {
+    display: flex;
+    padding-top: 50px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: aqua;
+    position: relative;
+    margin: auto;
+}
+
+.circle::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: red;
+    z-index: -1;
+    transform: scale(2);  
+}

@@ -1,0 +1,98 @@
+<!-- Gồm 4 thuộc tính: Relative, Absolute, Fixed, Sticky -->
+<!-- Dùng để tạo một khoảng nhỏ đè lên background lớn khi ta nhấn vào một cái phần tử nào đấy -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position</title>
+        <meta charset="utf8">
+        <style>
+            html, body{
+                margin: 0;
+            }
+            h1{
+                /* Relative nó sẽ không phụ thuộc vào bất kì phần tử nào
+                Nó không giống với margin có thể đè lên các phần tử khác */
+                position: relative;
+                top: 100px;
+                bottom: 100px;
+            }
+
+            /* Absolute thì nó sẽ phụ thuộc vào thẻ có class cha gần nhất chứa thuộc tính positions */
+            .box{
+                margin-top: 200px;
+                width: 300px;
+                height: 300px;
+                background-color: #333;
+                position: relative;
+            }
+
+            .box_child{
+                /* Nếu muốn tạo một lớp phủ trên cả box cha thì ta chỉ cần
+                bỏ kích thước box con và đưa tất cả giá trị về 0 */
+                width: 50px;
+                height: 50px;
+                background-color: red;
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+
+            .box2{
+                width: 200px;
+                height: 200px;
+                background-color: blueviolet;
+                position: absolute;
+                bottom: 0;
+                right: 0;
+            }
+
+            /* Fixed dùng để dính một phần tử cố định trên trang khi di chuyển trang đó */
+            .header{
+                width: 100%;
+                height: 100px;
+                background-color: blue;
+                position: fixed;
+                top: 0;
+            }
+
+            /* Không nên dùng nhiều vì nhiều trình duyệt không hỗ trợ
+            Khác với fixed thì nó có thể di chuyển đến vị trí cố định theo ý muốn của mình(bám dính) */
+            h1{ 
+                margin-top: 40px;
+                padding: 0;
+                color: white;
+                background-color: #333;
+                position: sticky;
+                /* Hỗ trợ trên cả trình duyệt safari thì dùng -webkit-sticky */
+                position: -webkit-sticky;
+                top: 0;
+                
+            }
+
+            ul{
+                height: 2000px;
+            }
+
+
+
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+        <div class="box">
+            <div class="box2">
+                <div>
+                    <div class="box_child"></div>
+                </div>
+            </div>
+        </div>
+        <h1>CSS Position</h1>
+        <ul>
+            <li>Relative</li>
+            <li>Absolute</li>
+            <li>Fixed</li>
+            <li>Sticky</li>
+        </ul>
+    </body>
+</html>
+

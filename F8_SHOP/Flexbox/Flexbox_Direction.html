@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flex_Direction</title>
+        <style>
+            .flex-container {
+                background-color: yellowgreen;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .flex-direction-type {
+                width: 100px;
+                height: 100px;
+                background-color: #ccc;
+                text-align: center;
+                line-height: 100px;
+                margin: 10px;
+                border: 1px solid #000;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Flex Direction</h1>
+        <p>Hướng dẫn sử dụng Flexbox Direction</p>
+        <div class="flex-container">
+            <div class="flex-direction-type">1</div>
+            <div class="flex-direction-type">2</div>
+            <div class="flex-direction-type">3</div>
+        </div>
+    </body>
+</html>
+
+
+<!-- Flex giống sự kết hợp của block với inline-block -->
+<!-- Sử dụng Flex nó giống như tạo cho mỗi thẻ con nằm trong một thẻ div -->
+<!-- Flex - Block trong trường hợp này khác nhau như sau:
+    Nếu thẻ cha sử dụng Block thì khi margin lên thẻ con thì nó chỉ margin khoảng cách giữa các thẻ con 
+    còn không margin khoảng cách giữa thẻ cha với thẻ con -->
+
+<!-- Flex - Inline-Block trong trường hợp này khác nhau như sau: 
+    Nó sẽ không lấy hết chiều dài của thẻ cha chứa nó, 
+    nhưng Inine-block khi sử dụng margin nó vẫn margin giữa thẻ cha với thẻ con -->

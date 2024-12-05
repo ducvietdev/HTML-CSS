@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>F8 - Shop</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            /*  */
+            html{
+                font-size: 50px;
+            }
+            /* rgba có thể nhìn xuyên qua màu đó
+            còn rgb tạo màu đặc không trong suốt, không có tham số alpha */
+
+            /* calc là hàm tính toán */
+            /* attr sử dụng kết hợp với lớp giả */
+            .Box{
+                width: calc(20% + 20px);
+                height: 50vh;
+                /* background-color: rgba(red, green, blue, alpha); */
+                background-color: rgb(255, 0, 0);
+
+            }
+
+            h1{
+                font-size: 1em;
+            }
+
+            a::after {
+                content: " ("attr(href)")";
+            }
+
+            .Box::after{
+                content: attr(data-title);
+            }
+
+        </style>
+    </head>
+    <body style="font-size: 25px;">
+
+        <!-- Muốn hiện lên hint khi chạm vào phần tử thì sử dụng thuộc tính title trong thẻ đó -->
+        <div class="Box" data-title="Đây là box màu đỏ"></div>
+
+        <a href="https://fullstack.edu.vn">Học lập trình</a>
+
+        <div>
+            <h1>CSS Units?</h1>
+        </div>
+    </body>
+</html>

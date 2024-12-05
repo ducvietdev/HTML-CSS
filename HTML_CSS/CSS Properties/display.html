@@ -1,0 +1,76 @@
+<!-- Chủ yếu làm rõ các thuộc tính display: flex và table, content -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display</title>
+        <style>
+            /* Table */
+            .table {
+                background-color: red;
+                /* Nó có thuộc tính của inline-block
+                và làm cho phần tử đứng riêng biệt như một khối block 
+                => xác định thành phần được chọn như một thẻ <table>. */
+                display: table;
+
+                /* Xóa đi thuộc tính của vùng chứa */
+                /* display: contents; */
+            }
+
+            /* Flex */
+            .flex {
+                width: 300px;
+                height: 200px;
+                background-color: blue;
+                /* Giống block nhưng nó linh hoạt hơn */
+                display: flex;
+                /* flex-direction: column; */
+                flex-wrap: wrap;
+                align-content: center;
+                justify-content: center;
+            }
+
+            .flex p {
+                color: #fff;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Display Property</h1>
+            <p>Làm chủ thuộc tính Property. <span class="table">Trong 1 buổi</span>Thành thạo Display</p>
+        </div>
+
+        <div class="flex">
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+            <p>Việt Đức</p>
+        </div>
+    </body>
+</html>
+
+<!-- Làm rõ các thuộc tính của flex -->
+<!-- flex-direction: định hướng chiều của phần tử, mặc định là row 
+    flex-wrap: thuộc tính bọc đối tượng con nằm trong cha hay không
+        + wrap: thẻ con luôn nằm trong thẻ cha
+        + nowrap: nếu giới hạn width thẻ con có thể tràn ra ngoài thẻ cha -->
+
+<!-- align-items: nó căn chỉnh các mục làm sao cho khi chia thẻ cha
+     thành nhiều phần bằng nhau theo số mục thì mỗi mục sẽ nằm đều -trong các phần đó -->
+
+<!-- align-content: căn chỉnh theo các đường linh hoạt 
+    sẽ gói gọn các mục trong đó rồi căn đều ra -->
+
+<!-- justify content: căn theo chiều ngược lại với align items -->

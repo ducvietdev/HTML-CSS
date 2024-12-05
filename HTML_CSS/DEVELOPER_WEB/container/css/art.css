@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.w3-container {
+    background-color: aquamarine;
+    padding: 24px 16px;
+    font-family: Raleway, Arial, sans-serif;
+    overflow: hidden;
+    height: 100px;
+}
+
+.w3-container a {
+    font-size: 24px;
+    padding: 12px 16px;
+    text-decoration: none;
+    color: #000;    
+}
+
+.w3-container a:hover {
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.w3-container .w3-left {
+    float: left;
+}
+
+.w3-container .w3-right {
+    float: right;
+}
+
+.w3-row {
+    width: 100%;
+    overflow: hidden;
+}
+
+.w3-row .w3-half {
+    width: 50%;
+    float: left;
+}
+
+/* Không tối ưu - Mất hình ảnh */
+.half-left {
+    display: grid;
+    grid-template-rows: 900px 700px 100px;
+}
+
+
+.w3-row img {
+    /* Chiều rộng ăn theo chiều cao */
+    max-width: 100%;
+    /* Xóa khoảng trắng giữa các ảnh */
+    display: block;
+}
+
+#about {
+    padding: 64px 0;
+    text-align: center;
+    position: relative;
+}
+
+#about h2 {
+    margin: 10px 0;
+    font-size: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    font-weight: 400;
+}
+
+#about img {
+    padding: 32px 0;
+    width: 300px;
+}
+
+#about form {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    font-family: Raleway, Arial, sans-serif;    
+}
+
+#about p:first-child {
+    margin: 15px 0;
+    text-align: justify;
+    line-height: 1.4;
+}
+
+#about .w3-large {
+    font-size: 18px;
+    color: #E91E63;
+    margin: 18px 0;
+}
+
+#about .w3-section {
+    margin: 16px 0;
+}
+
+#about .w3-section .w3-input {
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+}
+
+#about .w3-button {
+    border: none;
+    width: 100%;
+    background-color: #333;
+    font-size: 15px;
+    padding: 8px 16px;
+    font-family: Raleway, Arial, sans-serif;   
+    color: #fff; 
+}
+
+#about .w3-button:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+#about p:last-child {
+    margin: 40px 0 16px;
+}
+
+#about p:last-child a {
+    color: #000;
+    font-weight: 0;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pseudo Class</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="demo.css">
+
+        <style>
+            /* checked tức là lúc chọn thì nó sẽ thay đổi kích thước đã thể hiện 
+            dùng cho radio và table*/
+            /* input:checked{
+                width: 40px;
+                height: 30px;
+            } */
+
+            /* Thay đổi kích thước text từ 100px -> 250px 
+            transition hiệu ứng chuyển tiếp khi ta nhấn vào text
+            ease-in-out: Khi nhấn vào text thì text sẽ mở từ trong ra ngoài*/
+            /* input{
+                width: 100px;
+                transition: ease-in-out, width .3s;
+            }
+
+            input:focus{
+                width: 250px;
+            } */
+
+            a{
+                text-decoration: none;
+            }
+
+            li:first-of-type{
+                color: blue;
+            }
+
+            li:nth-child(2n){
+                color: orangered;
+            }
+
+            /* li:nth-last-child(1){
+                color: blueviolet;
+            } */
+
+            /* li:nth-last-of-type(5){
+                color: crimson;
+            } */
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Bổ sung thêm một vài lớp giả</h1>
+            <p>Một số lớp giả rất quan trọng trong sử dụng CSS</p>
+            <div class="child_example">
+                <ul>
+                    <li>:Checked</li>
+                    <li>:Focus</li>
+                    <li>:first-of-type</li>
+                    <li>:in-range</li>
+                    <li>:lang</li>
+                </ul>
+            </div>
+            <input name="gender" type="text">
+            <input name="gender" type="text">
+            <a title="Link" href="https://webthethao.vn/bong-da-anh/doi-hinh-mu-20212022-danh-sach-so-ao-cau-thu-chi-tiet-9szsnJm7g.htm"><br>Cầu thủ bóng đá</a>
+        </div>
+    </body>
+</html>

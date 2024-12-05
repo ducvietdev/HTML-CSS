@@ -1,0 +1,44 @@
+<!-- Có 2 nhóm:
+Đơn vị tuyệt đối(px) và Đơn vị tương đối(%, rem, em, vw, vh)  -->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>F8 - Shop</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            /* Đối với đơn vị tuyệt đối thì khi thay đổi độ rộng màn hình 
+            thì phần tử đó không bị thay đổi về mặt kích thước */
+
+            /* Đối với đơn vị tương đối có cái để phụ thuộc vào 
+            nên khi thay đổi kích thước thì nó cũng thay đỏi theo */
+
+            /* rem thì phụ thuộc vào thẻ html */
+
+            /* em phụ thuộc vào thẻ gần nhất mà có thuộc tính đang sử dụng em tại đó */
+            html{
+                font-size: 40px;
+            }
+            .Box{   
+                width: 50vw;
+                height: 40vh;
+                background-color: red;
+            }
+
+            h1{
+                font-size: 1em;
+            }
+            
+            /* vw - viewport width 
+               vh - viewport height */
+
+        </style>
+    </head>
+    <body style="font-size: 30px;">
+        <div class="Box"></div>
+        <div>
+            <h1>CSS Units?</h1>
+        </div>
+    </body>
+</html>

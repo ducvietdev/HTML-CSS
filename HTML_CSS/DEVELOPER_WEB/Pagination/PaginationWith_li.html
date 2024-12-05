@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pagination</title>
+        <style>
+            .flex {
+                width: 400px;
+                height: 80px;
+                line-height: 80px;
+                background-color: #eee;
+                position: absolute;
+                top: 15%;
+                left: 40%;
+                margin: -25px 0 0 -150px;
+            }
+
+            .flex ul {
+                display: flex;
+                padding: 0;
+                margin: 0;
+                box-shadow: 0 10px 20px 0 #ccc;
+            }
+
+            .flex ul li {
+                flex: 1;
+                list-style: none;
+                text-align: center;
+                position: relative;
+                font-size: 20px;
+                font-weight: bold;
+                transition: 0.3s ease;
+                cursor: pointer;
+                user-select: none;
+            }
+
+            .flex ul li:hover {
+                background-color: rgba(255, 255, 255, 0.25);
+                color: #65bcc9;
+            }
+
+            .flex ul li:nth-child(2):hover ~ .bar {
+                left: 20%;
+            }
+            .flex ul li:nth-child(3):hover ~ .bar {
+                left: 40%;
+            }
+            .flex ul li:nth-child(4):hover ~ .bar {
+                left: 60%;
+            }
+            .flex ul li:nth-child(5):hover ~ .bar {
+                left: 80%;
+            }
+
+            .flex ul .bar {
+                width: 20%;
+                height: 5px;
+                background-color: dodgerblue;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                transition: 0.3s ease;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <div class="bar"></div>
+            </ul>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.Box {
+    background-color: orange;
+    height: 100px;
+}
+
+.Box h3 {
+    /* text-align: căn giữa theo chiều ngang có tính kế thừa */
+    text-align: center;
+    /* Căn giữa theo chiều dọc có tính kế thừa */
+    line-height: 100px;
+}
+
+.Box2 {
+    background-color: red;
+    height: 100px;
+    display: flex;
+    /* Căn theo chiều dọc */
+    align-items: center;
+    /* Căn theo chiều ngang */
+    justify-content: center;
+}
+
+.Box2 h3 {
+    /* margin: auto; */
+}
+
+.Box3 {
+    background-color: blueviolet;
+    height: 100px;
+    position: relative;
+}
+
+.Box3 h3 {
+    position: absolute;
+    /* Cách phần đầu của thẻ box 50% chiều cao của box */
+    top: 50%;
+    /* Đẩy lên theo chiều dọc đúng 50% chiều cao h3 */
+    transform: translate(-50%, -50%);
+    left: 50%;
+}
+
+
+/* Khi thay đổi height thì line-height cũng đổi theo
+Vậy la,f thế nào để tiện hơn mà không cần thay đổi nhiều?
+=> dùng cách đặt biến */
+.Box4 {
+    --height: 200px;
+    background-color: green;
+    height: var(--height);
+    text-align: center;
+    line-height: var(--height);
+}
+
+.Box5 {
+    background-color: blue;
+    height: 100px;
+    display: flex;
+}
+
+/* Muốn tạo vạch ngăn cách mà khi thay đổi kích thước của vạch
+thì các kích thước khác không đổi 
+=> sử dụng pseudo element*/
+
+.Box5 h3 {
+    position: relative;
+    margin: auto;
+}
+
+.Box5 h3::after {
+    left: -10px;
+    content: "";
+    position: absolute;
+    border-left: 3px solid white;
+    height: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+}

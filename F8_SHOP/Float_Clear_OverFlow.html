@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Float-Clear-Overflow</title>
+        <style>
+            div{
+                width: 100%;
+                background-color: blue;
+
+            }
+
+            img{
+                border: 1px solid black;
+                /* float chèn thêm vào ở vị trí tương ứng */
+                float: right;
+            }
+
+            p {
+                clear: right;
+            }
+            .clearfix{
+                /* Tính tràn: hidden, scroll, auto
+                scroll khác auto ở chỗ nó sẽ lấy chiều cần thiết để làm thanh kéo
+                và bỏ thanh kéo của chiều không cầm thiết */
+                overflow: auto;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="clearfix">
+            <p>HTML, CSS, JAVA SCRIPT</p>
+            <img src="https://devforum.info/uploads/banner/htmlcss.jpg"  width="200px" height="200px" alt="html&css&js">
+        </div>
+    </body>
+</html>

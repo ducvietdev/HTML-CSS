@@ -1,0 +1,51 @@
+<!-- Thuộc tính border-radius bẻ vòng các góc phần tử -->
+<!-- Shadow Effect tạo bóng cho văn bản  -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Round Corner</title>
+        <style>
+            .round{
+                background-color: green;
+                border-radius: 25px;
+                padding: 10px;
+                width: 200px;
+                height: 200px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* Trộn nhiều màu */
+            h1{
+                text-shadow: 1px 1px red, 2px 2px 5px blue, 2px 2px 2px blueviolet;
+            }
+
+            /*  Tạo viền thuần túy xung quanh một số văn bản (không có bóng) */
+            h2{ 
+                color: yellow;
+                text-shadow: -1px 0  black, 0 1px black, 1px 0 black, 0 -1px black;
+            }
+            
+            .box_shadow{
+                margin-top: 10px;
+                width: 200px;
+                height: 200px;
+                background-color: yellow;
+                box-shadow: 10px 10px black;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Text Shadow Effect</h1>
+        <h2>Multiple Shadow Effect</h2>
+        <div class="round">
+            <p id="border_image">Rounded Corner</p>
+        </div>
+        <div class="box_shadow">
+
+        </div>
+    </body>
+</html>

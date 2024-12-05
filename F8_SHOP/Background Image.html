@@ -1,0 +1,47 @@
+<!-- Chèn ảnh cho background đồng thời chỉnh sửa ảnh đó sao cho phù hợp với khung hình -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đệm, viền và khoảng lề</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            html, body{
+                margin: 0;
+            }
+
+            .header{
+                width: 100%;
+                height: 100vh;
+                /* Để nhiều ảnh bằng cách giữa 2 url sử dụng dấu phẩy
+                cái nào viết trước thì nó ở trên */
+                background-image: 
+                url(https://thestarvn.com/m/2017/11/cropped-star-300x300.png),
+                url(https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-g%C3%A1i-%C4%91%E1%BA%B9p-cute-819x1024.jpg);
+                background-size: 100px;
+                /* Sử dụng để không lặp lại ảnh */
+                background-repeat: no-repeat;
+            }
+
+            .header1{
+                width: 100%;
+                height: 100vw;
+                /* linear-gradient(): tạo một dải màu chuyển */
+                background-image: linear-gradient(0, rgba(255, 255, 0, 0.5), rgba(0, 0, 255, 0.5)),
+                url(https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-g%C3%A1i-%C4%91%E1%BA%B9p-cute-819x1024.jpg);
+                /* background-size: 100px; */
+                background-repeat: no-repeat;
+                /* Lấy chiều dài nhất của bức ảnh sao cho phần ảnh không bị che khuất để làm 100% khung hình*/
+                background-size: contain;
+                /* Lấy chiều dài nhất của bức ảnh sao cho phần ảnh chấp nhận bị che khuất để làm 100% khung hình
+                -> bù lấp phần bị khoảng trắng ... khác với "contain" là ở điểm đó*/
+                background-size: cover;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="header"></div>
+        <div class="header1"></div>
+    </body>
+</html>

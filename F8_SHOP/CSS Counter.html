@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!-- <html>
+    <head>
+    <style>
+        body {
+            counter-reset: section;
+        }
+
+        h2::before {
+            counter-increment: section;
+            content: "Section " counter(section) ": ";
+        }
+    </style>
+    </head>
+    <body>
+        <h1>Using CSS Counters</h1>
+
+        <h2>HTML Tutorial</h2>
+        <h2>CSS Tutorial</h2>
+        <h2>JavaScript Tutorial</h2>
+        <h2>Python Tutorial</h2>
+        <h2>SQL Tutorial</h2>
+    </body>
+</html> -->
+<html>
+    <head>
+        <title>Counters</title>
+        <meta charset="utf8">
+        <style>
+            /* Tạo bộ đếm cho cả body */
+            body{ 
+                counter-reset: section;
+            }
+            /* Tạo bộ đếm cho thẻ cha h1 */
+            h1{
+                counter-reset: subsection;
+            }
+            /* Truy cập đến body để tăng giá trị */
+            h1::before{
+                counter-increment: section;
+                content: "Section" counter(section) ":" " ";
+            }
+            /*  Truy cập đến thẻ h1 để tăng giá trị */
+            h2::before{
+                counter-increment: subsection;
+                content: counter(section) "." counter(subsection) " ";
+            }
+        </style>
+    </head>
+    <body>
+        <h1>HTML/CSS Tutorial</h1>
+        <h2>HTML</h2>
+        <h2>CSS</h2>
+        <h2>Bootstrap</h2>
+        <h2>W3.CSS</h2>
+
+        <h1>Scripting Tutorial</h1>
+        <h2>JavaScript</h2>
+        <h2>JQuery</h2>
+        <h2>React</h2>
+   
+        <h1>Programming Tutorial</h1>
+        <h2>Python</h2>
+        <h2>Java</h2>
+        <h2>C++</h2>
+    </body>
+</html>

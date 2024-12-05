@@ -1,0 +1,33 @@
+/* Set lại CSS trong page tạo, đây là việc nên làm khi bắt đầu tạo 1 trang WEB */
+/* *{
+    padding: 0;
+    margin: 0;
+} */
+
+#player_name{
+    color: yellow;
+}
+
+:root{
+    --hate: blue;
+}
+
+.dis_player{
+    color: var(--hate);
+}
+
+/* .first_player.p1{
+    color: cyan;
+}
+
+ul > .p1{
+    color:chocolate;
+} */
+
+ul > li{
+    color: orangered;
+}
+
+ol > li{
+    color: orange;
+}

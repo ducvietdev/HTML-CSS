@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.clear {
+    clear: both;
+}
+
+.text-white {
+    color: #fff !important;
+}
+
+#main {
+
+}
+
+#header {
+    height: 50px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav {
+    display: inline-block;
+}
+
+#nav .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    position: relative;
+}
+
+#nav > li > a {
+    color: white;
+    text-transform: uppercase;
+}
+
+#nav  li  a {
+    text-decoration: none;
+    line-height: 50px;
+    padding: 0 20px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav > li:hover > a {
+    color: black;
+    background-color: #ccc;
+}
+
+#nav .subnav li:hover a {
+    color: black;
+    background-color: #ccc;
+}
+
+#nav .subnav {
+    position: absolute;
+    display: none;
+    min-width: 150px;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+#nav .subnav a {
+    color: black;
+    padding: 0 10px;
+    line-height: 40px;
+}
+
+#nav .nav-arrow-down {
+    font-size: 10px;
+}
+
+#header .search-btn {
+    float: right;
+    padding: 0 24px;
+}
+
+#header .search-btn:hover {
+    color: #fff!important;
+    background-color: #f44336!important;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    font-size: 15px;
+    color: #fff;
+    line-height: 50px;
+}
+
+#slider {
+    margin-top: 50px;
+    padding-top: 50%;
+    background: url(./img/Web_Slider/slider2.jpg) top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text_content {
+    position: absolute;
+    color: #fff;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+#slider .text_heading {
+    font-weight: 300;
+    font-size: 25px;
+}
+
+#slider .text_description {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+
+#content {
+
+}
+
+#content .content-section {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 64px 0;
+}
+
+#content .section-heading {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin: 10px 0;
+}
+
+#content .section-title {
+    text-align: center;
+    font-style: italic;
+    font-size: 15px;
+    margin: 15px 0;
+    opacity: 0.6;
+}
+
+#content .section-text {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 15px 0;
+}
+
+#content .members-list {
+    padding: 32px 0;
+    /* overflow: hidden; */
+}
+
+#content .members-item {
+    float: left;
+    width: calc(100% / 3);
+    text-align: center;
+}
+
+#content .members-name {
+   margin: 15px 0;
+   font-size: 15px;
+}
+
+#content .members-img {
+    width: 154px;
+    border-radius: 4px;
+}
+
+/* Tour section */
+.tour-section {
+    background-color: #000;
+    padding-bottom: 48px;
+}
+
+.tickets-list {
+    background-color: #fff;
+    margin-top: 40px;
+}
+
+.tickets-list li {
+    font-size: 15px;
+    padding: 11px 16px;
+    border-bottom: 1px solid #ddd;
+    color: #757575;
+    list-style-type: none;
+}
+
+.tickets-list .sold-out {
+    background-color: #f44336;
+    color: white;
+    padding: 4px 8px;
+    margin-left: 16px;
+}
+
+.tickets-list .quantity {
+    float: right;
+    background-color: #000;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 24px;
+    margin-top: -3px;
+    /* Khi dùng float thì sẽ được hiểu là mang tính chất block 
+    nên sẽ dùng được width, height và margin âm */
+}
+
+.places-list {
+    margin: 32px -8px 0;
+    padding-bottom: 48px;
+}
+
+.places-item {
+    float: left;
+    width: calc(100% / 3);
+    padding: 0 8px;
+}
+
+.place-img {
+    width: 100%;
+    display: block;
+}
+
+.place-img:hover {
+    opacity: 0.6;
+}
+
+.place-text {
+    background-color: #fff;
+    padding : 16px;
+    font-size: 15px;    
+}
+
+.place-name {
+    font-size: 15px;
+    margin-bottom: 15px;
+    font-weight: 550;
+}
+
+.place-time {
+    margin-bottom: 15px;
+    color: #757575;
+}
+
+.place-desc {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.place-buy-btn {
+    text-decoration: none;
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+    padding: 11px 16px;
+    border-radius: 2px;
+}   
+
+.place-buy-btn:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+#footer {
+
+}

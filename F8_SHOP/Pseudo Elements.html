@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>F8 - Shop</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            .box{
+                width: 50%;
+                height: 120px;
+                background-color: violet;
+            }
+
+            /* ::before và ::after dùng để thêm vào một phần tử 
+            mà không cần phải tạo thuộc tính trong phần tử đó */
+            .box::before{
+                content: "";
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-color: #333;
+            }
+
+            .box::after{
+                content: "";
+                display: block;
+                width: 50px;
+                height: 50px;
+                background-color: #333;
+            }
+
+            /* Thể hiện thuộc tính cho kí tự đầu tiên */
+            h1::first-letter{
+                font-size: 50px;
+            }
+
+            /* Thể hiện thuộc tính cho dòng đầu tiên */
+            h1::first-line{
+                color: yellowgreen;
+            }
+
+            /* Khi bôi đen thì nó sẽ thể hiện thuộc tính mà ta dùng trong đó */
+            ::selection{
+                background-color: blue;
+            } 
+
+        </style>    
+    </head>
+    <body>
+        <div class="box"></div>
+        <div>
+            <h1>CSS Pseudo Elements <br \>Dòng thứ 2</h1>
+            <h2 class="demo">Demo Pseudo</h2>
+            <ul>
+                <li>::before</li>
+                <li>::after</li>
+                <li>::first-letter</li>
+                <li>::first-line</li>
+                <li>::selection</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

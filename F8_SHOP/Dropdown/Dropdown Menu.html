@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<!-- Cách 1: -->
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drop Menu</title>
+        <style>
+
+            * {
+                box-sizing: border-box;
+            }
+
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .dropdown {
+                position: relative;
+                right: 0;
+            }
+
+            .dropdown-btn {
+                display: inline-block;
+                text-decoration: none;
+                background-color: #4CAF50;
+                color: #fff;
+                padding: 16px;
+                cursor: pointer;
+            }
+
+            .dropdown:hover .dropdown-list {
+                display: block;
+            }
+
+            .dropdown-btn:hover {
+                background-color: #3e8e41;
+                
+            }
+
+            .dropdown-list {
+                display: none;
+                position: absolute;
+                background-color: #333;
+                box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+                min-width: 160px;
+                /* Tức là ul bị cách btn 16px đúng bằng phần padding của btn
+                => Đẩy ul lên trên 16px bằng margin âm sau đó đẩy xuống 1/8(do height của ul = 127.2px) so với chiều cao của ul 
+                hoặc là không cần dùng margin chỉ cần dùng translateY(âm là đc)*/
+                transform: translateY(-12.5%);
+            }
+
+            .dropdown-list li {
+                margin-left: -40px;
+                list-style-type: none;
+                padding: 12px 16px;
+                color: #000;
+            }
+
+            .dropdown-list a{
+                color: #000;
+                font-size: 16px;
+                text-decoration: none;
+            }
+
+            .dropdown-list li:hover {
+                background-color: #f1f1f1;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2>Dropdown Menu</h2>
+            <p>Move the mouse over the button to open the dropdown menu.</p>
+            <div class="dropdown">
+                <a class="dropdown-btn" href="#">Drop Down</a>
+                <ul class="dropdown-list">
+                    <li><a href="#">Link 1</a></li>
+                    <li><a href="#">Link 2</a></li>
+                    <li><a href="#">Link 3</a></li>
+                </ul>
+            </div>
+            <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p>
+        </div>
+    </body>
+</html>
+
+<!-- Cách 2: -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drop Menu</title>
+        <style>
+
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .dropdown {
+                display: inline-block;
+                position: relative;
+            }
+
+            .dropdown .dropbtn {
+                background-color: #4CAF50;
+                padding: 16px;
+                border: none;
+                color: #fff;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .dropdown .dropdown-content {
+                /* display: none; */
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.25);
+            }
+
+            .dropdown-content a {
+                display: block;
+                text-decoration: none;
+                padding: 12px 16px;
+                color: #000;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #333;
+            }
+
+            .dropbtn:hover {
+                background-color: #3e8e41;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Dropdown Menu</h2>
+        <p>Move the mouse over the button to open the dropdown menu.</p>
+
+        <div class="dropdown">
+            <button class="dropbtn">Dropdown</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <p><strong>Note:</strong> We use href="#" for test links. In a real web site this would be URLs.</p>
+    </body>
+</html> -->

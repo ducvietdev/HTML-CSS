@@ -1,0 +1,26 @@
+@import 'resets';
+@import 'variable';
+
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name);
+}
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+}
+
+.main {
+    width: 80%;
+    margin: 0 auto;
+
+    // Cách tránh trùng lặp lại tên class cha ở trong class con
+    #{&}__paragraph {
+    // font-weight: map-get($font-weights, bold);
+    font-weight: weight(regular);
+
+    &:hover {
+        color: pink;
+    }
+    }
+}

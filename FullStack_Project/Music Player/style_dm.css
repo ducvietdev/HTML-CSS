@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+
+/* * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+} */
+
+html {
+    box-sizing: border-box ;
+    --parent-height : 20em ;
+    --duration: 1s ;
+    --duration-text-wrap: 12s 1.5s cubic-bezier(0.82, 0.82, 1, 1.01) ;
+    --cubic-header: var(--duration) cubic-bezier(0.71, 0.21, 0.3, 0.95) ;
+    /* Khi nhấn vào bài hát thì body sẽ đổi màu */
+    --cubic-slider : var(--duration) cubic-bezier(0.4, 0, 0.2, 1) ;
+    --cubic-play-list : .35s var(--duration) cubic-bezier(0, 0.85, 0.11, 1.64) ;
+    --cubic-slider-context : cubic-bezier(1, -0.01, 1, 1.01) ; 
+}
+
+html *,
+html *::before,
+html *::after {
+    box-sizing: inherit;
+    /* Không thấy thanh cuộn */
+    scrollbar-width: none;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* vh = 1% so với kích thước khung nhìn ban đầu */
+    height: 100vh;
+    background-color: #e5e7e9 ;
+    font-family: 'Quicksand', sans-serif ;
+    -webkit-tap-highlight-color: transparent ;
+    transition: background-color  var(--cubic-slider) ;
+}
+
+img {
+    width: 100%;
+    flex-shrink: 0;
+    display: block;
+    object-fit: cover;
+}
+
+.list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.player {
+    width: 17.15 rem;
+    display: flex;
+    /* Ẩn phần thừa đi */
+    overflow: hidden;
+    font-size: 1.22em;
+    border-radius: 1.35em ;
+    flex-direction: column;
+    background-color: white ;
+    height: var(--parent-height) ;
+}
+
+.player__header {
+    display: flex;
+    width: 100%;
+    height: 5.85em;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-color: white  ;
+    padding: .95em 0.6em 0 1.2em ;
+    box-shadow: 0 2px 6px 1px #0000001f ;
+    transition: height var(--cubic-header), box-shadow var(--duration), padding var(--duration) ease-in-out ;
+    border-radius: inherit ;
+    z-index: 1 ;
+    gap: 0 .4em ;
+    position: relative;
+    flex-shrink: 0;
+}

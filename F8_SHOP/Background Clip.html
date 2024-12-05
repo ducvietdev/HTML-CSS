@@ -1,0 +1,31 @@
+<!-- Dùng để đổ màu nền từ ranh giới đâu đến đâu -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đệm, viền và khoảng lề</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            html, body{
+                margin: 0;
+            }
+            .header{
+                width: 100%;
+                height: 100px;
+                background-color: black;
+                padding: 20px;
+                box-sizing: border-box;
+                border: 10px dashed #fff;
+                /* Dùng để đổ màu nền cho content thôi 
+                bỏ qua border và padding thì dùng background-clip  */
+                background-clip: content-box;
+                /* Mặc định là border-box tức là đổ màu nền tử border trở vào
+                padding thì đổ màu từ padding trở vào */
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="header"></div>
+    </body>
+</html>

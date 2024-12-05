@@ -1,0 +1,573 @@
+<html>
+
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/paho-mqtt/1.0.2/mqttws31.min.js"
+        type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <style>
+        .sentence {
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1471')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1425')">Kết quả đó được thể hiện trên một số nội dung chủ yếu:</a>
+    </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1472')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1426')">Một là, cơ cấu nông nghiệp có bước phát triển mới theo
+            hướng tăng cường sản xuất hàng hóa, diện mạo nông thôn có nhiều chuyển biến tích cực.</a></p>
+    <p>Trong giai đoạn 2001 – 2005, tốc độ tăng trưởng nông nghiệp bình quân 5,0%/năm; cơ cấu nông nghiệp có hướng phát
+        triển tốt (trồng trọt – chăn nuôi 63,0%, thủy sản 33,8%, dịch vụ 3,2%), thu nhập bình quân đầu người (khu vực
+        nông thôn) 4.620.000đ/năm; bước đầu áp dụng và chuyển giao khoa học kỹ thuật và công nghệ vào sản xuất góp phần
+        nâng cao năng suất, chất lượng, giảm giá thành cho nhiều sản phẩm; một bộ phận nông dân tích lũy được kinh
+        nghiệm mạnh dạn đầu tư vào đổi mới cơ cấu sản xuất, đầu tư vào sản xuất, dịch vụ và có nhiều mô hình đạt giá trị
+        cao. Đến năm 2006, “toàn tỉnh đã có gần 20% diện tích đạt tiêu chuẩn cánh đồng 50 triệu đồng/ha (cao nhất cả
+        nước). Hình thành được một số vùng sản xuất hàng hóa như: vải thiều (Thanh Hà, Chí Linh); dưa hấu, củ đậu (Kim
+        Thành, Gia Lộc); hành, tỏi (Nam Sách, Thanh Hà, Kinh Môn); hoa, cây cảnh (Gia Lộc, TP Hải Dương); cà rốt (Cẩm
+        Giàng); cá, ba ba (Tứ Kỳ, Ninh Giang, Kim Thành)” [53, tr.1]</p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1477')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1431')">Hai là, hình thành một số mô hình sản xuất kinh doanh kiểu
+            công nghiệp.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1478')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1432')">Đây là hướng phát triển mới trong phát triển kinh tế nông
+            nghiệp ở nông thôn, mô hình kinh tế trang trại dần hình thành để thay thế kiểu sản xuất manh mún, nhỏ lẻ,
+            năng suất, chất lượng sản phẩm và sức cạnh tranh của hàng hóa thấp.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1479')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1433')">Đến năm 2006, trên địa bàn Tỉnh đã có hơn 6.</a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1480')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1434')">700 hộ nuôi gia cầm quy mô 100 con trở lên; 1.</a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1481')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1435')">200 hộ nuôi lợn quy mô 50 con trở lên; 2.</a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1482')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1436')">880 hộ nuôi thủy sản chất lượng cao.</a> <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1483')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1437')">Hiện có 671 trang trại (tăng 3,9 lần so với năm 2001) với
+            quy mô bình quân 4,4ha/trang trại, giá trị sản xuất bình quân khoảng 200 triệu đồng/trang trại/năm.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1484')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1438')">Ba là, xây dựng nông thôn mới đã đạt được những kết quả
+            bước đầu</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1485')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1439')">Thực hiện chủ trương của Tỉnh ủy, UBND tỉnh về phát triển
+            kinh tế nông nghiệp, cải thiện đời sống của nhân dân khu vực nông thôn.</a> Trong giai đoạn 2001 – 2006, xây
+        dựng NTM ở Hải Dương đã đạt được một số thành tựu quan trọng: 100% hộ dân được dung điện sinh hoạt; 59,5% đường
+        giao thông được kiên cố hóa; trường học được kiên cố hóa đạt 91%; 65% trạm xá được kiên cố hóa; tỷ lệ hộ dân
+        được sử dụng nước hợp vệ sinh đạt 71,6%... <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1441')">hệ thống đê điều được tu bổ, nâng cấp ngày càng vững chắc,
+            cơ bản đảm bảo việc phòng chống lụt bão; hệ thống thủy lợi được đầu tư nâng cấp, xây mới 11 trạm bơm, kiên
+            cố hóa 837,3km kênh mương các loại.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1488')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1442')">Bốn là, đời sống vật chất và tinh thần của nhân dân từng
+            bước được cải thiện</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1489')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1443')">Với chủ trương chú trọng hỗ trợ đầu tư phát triển một số
+            làng nghề truyền thống và xây hình thành thêm một số làng nghề mới (tổng 32 làng nghề); kết cấu hạ tầng ở
+            nông thôn (điện, đường, trường, trạm, nước sạch…) được đầu tư xây dựng và ngày càng bảo đảm tốt hơn cho sản
+            xuất, sinh hoạt của nhân dân; hoạt động văn hóa thông tin, thể dục thể thao ở nông thôn có bước phát triển
+            tích cực: Có 831 nhà văn hóa thôn, xã; 650 thư viện xã và trường học được xây dựng; 65 di tích lịch sử văn
+            hóa được trùng tu, tôn tạo; khôi phục một số lễ hội truyền thống; tỷ lệ dân số luyện tập thể dục thể thao
+            thường xuyên đạt 17,5%.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1490')"></a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1444')">Đời sống nhân dân không ngừng được cải
+            thiện.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1491')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1445')">Thu nhập bình quân đầu người ở khu vực nông thôn tăng 1,79
+            lần; mức chi tiêu tăng 1,67 lần.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1492')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1446')">Tỷ lệ hộ nghèo theo tiêu chí cũ là 3,7% (theo tiêu chí mới
+            là 17,93%)…</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1493')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1447')">Tuy nhiên, quá trình xây dựng nông thôn Hải Dương trong
+            những năm trước 2008 vẫn còn tồn tai một số hạn chế cần khắc phục.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1494')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1448')">Thứ nhất, sản xuất nông nghiệp nhìn chung còn nhỏ lẻ, manh
+            mún, chưa tạo ra được những sản phẩm hàng hóa thế mạnh của địa phương.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1495')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1449')">Thứ hai, việc chuyển đổi cơ cấu nông nghiệp có nhiều tiến
+            bộ song mới mở rộng về quy mô diện tích trong khi đó hiệu quả đạt được còn nhiều hạn chế; cơ cấu nông thôn
+            chậm đổi mới, công nghiệp chế biến, dịch vụ, tiểu thủ công nghiệp, làng nghề chậm phát triển, lao động nông
+            nhàn còn cao.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1496')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1450')">Thứ ba, đời sống vật chất, tinh thần ở khu vực nông thôn so
+            với thành thị còn có sự chênh lệch lớn, khoảng cách giàu nghèo có xu hướng gia tăng.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1497')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1451')">Thứ tư, phát triển kỹ thuật chưa gắn với việc xây dựng NTM
+            theo hướng văn minh, hiện đại.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1498')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1452')">Tình trạng xây dựng tùy tiện, thiếu quy hoạch làm phá vỡ
+            cảnh quan, vấn đề ô nhiễm môi trường ở khu vực nông thôn có xu hướng gia tăng.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1453')">Thực trạng trên đặt ra yêu cầu mới, đòi hỏi
+            Tỉnh ủy, UBND tỉnh cần đề ra những chủ trương, biện pháp phù hợp với thực tiễn địa phương, khơi dậy truyền
+            thống của địa phương trong suốt quá trình cách mạng đã qua, phát huy những ưu điểm đã đạt được, tháo gỡ
+            những khó khăn, vướng mắc nhằm thực hiện thắng lợi Nghị quyết số 26-NQ/TW, Về nông nghiệp, nông dân, nông
+            thôn được thông qua tại Hội nghị lần thứ bảy, Ban Chấp hành Trung ương Đảng khóa X.</a></p>
+    <p>1.1.4. <a class="sentence" onclick="publishMessage('tams_v3_id_21','1500')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1454')">Chủ trương, chính sách của Đảng và Nhà nước về xây dựng
+            nông thôn mới</a> </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1501')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1455')">Từ khi Đảng Cộng sản Việt nam ra đời và nắm quyền lãnh đạo
+            cách mạng, nhất là trong sự nghiệp đổi mới toàn diện đất nước, Đảng ta luôn nhận thức đúng vị trí, tầm quan
+            trọng của nông nghiệp, nông dân và nông thôn.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1502')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1456')">Đảng ta khẳng định: sự nghiệp CNH, HĐH nông nghiệp, nông
+            thôn là một trong những nội dung, nhiệm vụ cơ bản của CNH, HĐH đất nước.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1503')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1457')">Đây là quan điểm hoàn toàn đúng được Đảng ta đúc kết qua
+            quá trình lãnh đạo cách mạng.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1504')">Đặc
+            biệt là kinh nghiệm của 20 năm xây dựng chủ nghĩa xã hội ở miền Bắc và kể từ khi cả nước hoàn toàn độc lập,
+            thống nhất bước vào thời kỳ quá độ lên xây dựng CNXH.</a> Trước đổi mới, không phải Đảng ta không nhận thức
+        được tầm quan trọng của nông nghiệp, nhưng do cơ chế quản lý tập trung, bao cấp đã kìm hãm sự phát triển của KT
+        – XH nói chung, kinh tế nông nghiệp nói riêng. <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1506')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1460')">Trước thực trạng đó, Đại hội đại biểu toàn quốc lần thứ VI
+            của Đảng (12/1986), đánh một dấu mốc quan trọng trong đổi mới tư duy của Đảng về xây dựng CNXH.</a> <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1507')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1461')">Trên lĩnh vực nông nghiệp, nông thôn, Đại hội nhấn mạnh:
+            trong những năm tới chúng ta thực sự lấy nông nghiệp làm mặt trận hàng đầu, ra sức đẩy mạnh sản xuất hàng
+            tiêu dùng và hàng xuất khẩu.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1508')"></a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1462')">Công nghiệp nặng trong bước này, hướng
+            trước hết vào phục vụ nông nghiệp, công nghiệp nhẹ, với quy mô và trình độ thích hợp.</a> Đường lối của Đại
+        hội VI là “luồng gió mới”, tạo nên sức sống mới nhằm khắc phục những khó khăn trầm trọng của tình hình KT – XH
+        nước ta nói chung, về nông nghiệp, nông thôn nói riêng. <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1510')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1464')">Kế thừa quan điểm của Đại hội VI, qua các kỳ đại hội và Hội
+            nghị Trung ương, Đảng ta không ngừng nhấn mạnh và khẳng định quyết tâm cao trong thực hiện chủ trương nhất
+            quán đối với nông nghiệp, phát triển một nền nông nghiệp toàn diện.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1511')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1465')">Phát triển mạnh nông nghiệp và kinh tế nông thôn lên sản
+            xuất lớn vừa là vấn đề cấp bách, vừa mang ý nghĩa chiến lược lâu dài.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1512')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1466')">Đại hội đại biểu toàn quốc lần thứ X của Đảng tiếp tục
+            khẳng định: hiện nay và trong nhiều năm tới, vấn đề nông nghiệp, nông dân và nông thôn có tầm chiến lược đặc
+            biệt quan trọng, phải luôn coi trọng CNH, HĐH nông nghiệp, nông thôn hướng tới xây dựng một nền nông nghiệp
+            hàng hóa lớn, đa dạng, phát triển nhanh và bền vững, có năng suất, chất lượng và khả năng cạnh tranh
+            cao.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1513')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1467')">Như vậy, trong bối cảnh tình hình quốc tế và khu vực có
+            nhiều diễn biến phức tạp, khó lường, trong đó có vấn đề an ninh lương thực càng khẳng định chủ trương của
+            Đảng là đúng.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1514')"></a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1468')">Sau hơn 20 tiến hành công cuộc đổi mới,
+            nền kinh tế nông nghiệp đã có những bước phát triển đáng kể, đời sống vật chất và tinh thần của cư dân nông
+            thôn từng bước được cải thiện, an ninh chính trị, trật tự an toàn xã hội được giữ vững.</a> <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1515')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1469')">Tuy nhiên, những thành tựu đó vẫn chưa tương xứng với tiềm
+            năng, lợi thế, còn tồn tại nhiều hạn chế, yếu kém.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1516')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1470')">Nguyên nhân chính của những hạn chế, yếu kém trên chủ yếu
+            do nhận thức về vị trí, vai trò của nông nghiệp, nông dân, nông thôn còn bất cập so với thực tiễn; chưa hình
+            thành một cách có hệ thống các quan điểm lý luận về phát triển nông nghiệp, nông dân, nông thôn; chính sách
+            phát triển còn thiếu đồng bộ, thiếu tính đột phá; việc tổ chức chỉ đạo thực hiện và công tác quản lý nhà
+            nước còn nhiều bất cập, yếu kém.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1471')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1425')">Kết quả đó được thể hiện trên một số nội dung chủ yếu:</a>
+    </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1472')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1426')">Một là, cơ cấu nông nghiệp có bước phát triển mới theo
+            hướng tăng cường sản xuất hàng hóa, diện mạo nông thôn có nhiều chuyển biến tích cực.</a></p>
+    <p>Trong giai đoạn 2001 – 2005, tốc độ tăng trưởng nông nghiệp bình quân 5,0%/năm; cơ cấu nông nghiệp có hướng phát
+        triển tốt (trồng trọt – chăn nuôi 63,0%, thủy sản 33,8%, dịch vụ 3,2%), thu nhập bình quân đầu người (khu vực
+        nông thôn) 4.620.000đ/năm; bước đầu áp dụng và chuyển giao khoa học kỹ thuật và công nghệ vào sản xuất góp phần
+        nâng cao năng suất, chất lượng, giảm giá thành cho nhiều sản phẩm; một bộ phận nông dân tích lũy được kinh
+        nghiệm mạnh dạn đầu tư vào đổi mới cơ cấu sản xuất, đầu tư vào sản xuất, dịch vụ và có nhiều mô hình đạt giá trị
+        cao. Đến năm 2006, “toàn tỉnh đã có gần 20% diện tích đạt tiêu chuẩn cánh đồng 50 triệu đồng/ha (cao nhất cả
+        nước). Hình thành được một số vùng sản xuất hàng hóa như: vải thiều (Thanh Hà, Chí Linh); dưa hấu, củ đậu (Kim
+        Thành, Gia Lộc); hành, tỏi (Nam Sách, Thanh Hà, Kinh Môn); hoa, cây cảnh (Gia Lộc, TP Hải Dương); cà rốt (Cẩm
+        Giàng); cá, ba ba (Tứ Kỳ, Ninh Giang, Kim Thành)” [53, tr.1]</p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1477')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1431')">Hai là, hình thành một số mô hình sản xuất kinh doanh kiểu
+            công nghiệp.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1478')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1432')">Đây là hướng phát triển mới trong phát triển kinh tế nông
+            nghiệp ở nông thôn, mô hình kinh tế trang trại dần hình thành để thay thế kiểu sản xuất manh mún, nhỏ lẻ,
+            năng suất, chất lượng sản phẩm và sức cạnh tranh của hàng hóa thấp.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1479')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1433')">Đến năm 2006, trên địa bàn Tỉnh đã có hơn 6.</a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1480')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1434')">700 hộ nuôi gia cầm quy mô 100 con trở lên; 1.</a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1481')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1435')">200 hộ nuôi lợn quy mô 50 con trở lên; 2.</a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1482')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1436')">880 hộ nuôi thủy sản chất lượng cao.</a> <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1483')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1437')">Hiện có 671 trang trại (tăng 3,9 lần so với năm 2001) với
+            quy mô bình quân 4,4ha/trang trại, giá trị sản xuất bình quân khoảng 200 triệu đồng/trang trại/năm.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1484')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1438')">Ba là, xây dựng nông thôn mới đã đạt được những kết quả
+            bước đầu</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1485')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1439')">Thực hiện chủ trương của Tỉnh ủy, UBND tỉnh về phát triển
+            kinh tế nông nghiệp, cải thiện đời sống của nhân dân khu vực nông thôn.</a> Trong giai đoạn 2001 – 2006, xây
+        dựng NTM ở Hải Dương đã đạt được một số thành tựu quan trọng: 100% hộ dân được dung điện sinh hoạt; 59,5% đường
+        giao thông được kiên cố hóa; trường học được kiên cố hóa đạt 91%; 65% trạm xá được kiên cố hóa; tỷ lệ hộ dân
+        được sử dụng nước hợp vệ sinh đạt 71,6%... <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1441')">hệ thống đê điều được tu bổ, nâng cấp ngày càng vững chắc,
+            cơ bản đảm bảo việc phòng chống lụt bão; hệ thống thủy lợi được đầu tư nâng cấp, xây mới 11 trạm bơm, kiên
+            cố hóa 837,3km kênh mương các loại.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1488')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1442')">Bốn là, đời sống vật chất và tinh thần của nhân dân từng
+            bước được cải thiện</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1489')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1443')">Với chủ trương chú trọng hỗ trợ đầu tư phát triển một số
+            làng nghề truyền thống và xây hình thành thêm một số làng nghề mới (tổng 32 làng nghề); kết cấu hạ tầng ở
+            nông thôn (điện, đường, trường, trạm, nước sạch…) được đầu tư xây dựng và ngày càng bảo đảm tốt hơn cho sản
+            xuất, sinh hoạt của nhân dân; hoạt động văn hóa thông tin, thể dục thể thao ở nông thôn có bước phát triển
+            tích cực: Có 831 nhà văn hóa thôn, xã; 650 thư viện xã và trường học được xây dựng; 65 di tích lịch sử văn
+            hóa được trùng tu, tôn tạo; khôi phục một số lễ hội truyền thống; tỷ lệ dân số luyện tập thể dục thể thao
+            thường xuyên đạt 17,5%.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1490')"></a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1444')">Đời sống nhân dân không ngừng được cải
+            thiện.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1491')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1445')">Thu nhập bình quân đầu người ở khu vực nông thôn tăng 1,79
+            lần; mức chi tiêu tăng 1,67 lần.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1492')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1446')">Tỷ lệ hộ nghèo theo tiêu chí cũ là 3,7% (theo tiêu chí mới
+            là 17,93%)…</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1493')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1447')">Tuy nhiên, quá trình xây dựng nông thôn Hải Dương trong
+            những năm trước 2008 vẫn còn tồn tai một số hạn chế cần khắc phục.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1494')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1448')">Thứ nhất, sản xuất nông nghiệp nhìn chung còn nhỏ lẻ, manh
+            mún, chưa tạo ra được những sản phẩm hàng hóa thế mạnh của địa phương.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1495')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1449')">Thứ hai, việc chuyển đổi cơ cấu nông nghiệp có nhiều tiến
+            bộ song mới mở rộng về quy mô diện tích trong khi đó hiệu quả đạt được còn nhiều hạn chế; cơ cấu nông thôn
+            chậm đổi mới, công nghiệp chế biến, dịch vụ, tiểu thủ công nghiệp, làng nghề chậm phát triển, lao động nông
+            nhàn còn cao.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1496')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1450')">Thứ ba, đời sống vật chất, tinh thần ở khu vực nông thôn so
+            với thành thị còn có sự chênh lệch lớn, khoảng cách giàu nghèo có xu hướng gia tăng.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1497')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1451')">Thứ tư, phát triển kỹ thuật chưa gắn với việc xây dựng NTM
+            theo hướng văn minh, hiện đại.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1498')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1452')">Tình trạng xây dựng tùy tiện, thiếu quy hoạch làm phá vỡ
+            cảnh quan, vấn đề ô nhiễm môi trường ở khu vực nông thôn có xu hướng gia tăng.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1453')">Thực trạng trên đặt ra yêu cầu mới, đòi hỏi
+            Tỉnh ủy, UBND tỉnh cần đề ra những chủ trương, biện pháp phù hợp với thực tiễn địa phương, khơi dậy truyền
+            thống của địa phương trong suốt quá trình cách mạng đã qua, phát huy những ưu điểm đã đạt được, tháo gỡ
+            những khó khăn, vướng mắc nhằm thực hiện thắng lợi Nghị quyết số 26-NQ/TW, Về nông nghiệp, nông dân, nông
+            thôn được thông qua tại Hội nghị lần thứ bảy, Ban Chấp hành Trung ương Đảng khóa X.</a></p>
+    <p>1.1.4. <a class="sentence" onclick="publishMessage('tams_v3_id_21','1500')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1454')">Chủ trương, chính sách của Đảng và Nhà nước về xây dựng
+            nông thôn mới</a> </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1501')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1455')">Từ khi Đảng Cộng sản Việt nam ra đời và nắm quyền lãnh đạo
+            cách mạng, nhất là trong sự nghiệp đổi mới toàn diện đất nước, Đảng ta luôn nhận thức đúng vị trí, tầm quan
+            trọng của nông nghiệp, nông dân và nông thôn.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1502')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1456')">Đảng ta khẳng định: sự nghiệp CNH, HĐH nông nghiệp, nông
+            thôn là một trong những nội dung, nhiệm vụ cơ bản của CNH, HĐH đất nước.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1503')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1457')">Đây là quan điểm hoàn toàn đúng được Đảng ta đúc kết qua
+            quá trình lãnh đạo cách mạng.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1504')">Đặc
+            biệt là kinh nghiệm của 20 năm xây dựng chủ nghĩa xã hội ở miền Bắc và kể từ khi cả nước hoàn toàn độc lập,
+            thống nhất bước vào thời kỳ quá độ lên xây dựng CNXH.</a> Trước đổi mới, không phải Đảng ta không nhận thức
+        được tầm quan trọng của nông nghiệp, nhưng do cơ chế quản lý tập trung, bao cấp đã kìm hãm sự phát triển của KT
+        – XH nói chung, kinh tế nông nghiệp nói riêng. <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1506')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1460')">Trước thực trạng đó, Đại hội đại biểu toàn quốc lần thứ VI
+            của Đảng (12/1986), đánh một dấu mốc quan trọng trong đổi mới tư duy của Đảng về xây dựng CNXH.</a> <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1507')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1461')">Trên lĩnh vực nông nghiệp, nông thôn, Đại hội nhấn mạnh:
+            trong những năm tới chúng ta thực sự lấy nông nghiệp làm mặt trận hàng đầu, ra sức đẩy mạnh sản xuất hàng
+            tiêu dùng và hàng xuất khẩu.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1508')"></a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1462')">Công nghiệp nặng trong bước này, hướng
+            trước hết vào phục vụ nông nghiệp, công nghiệp nhẹ, với quy mô và trình độ thích hợp.</a> Đường lối của Đại
+        hội VI là “luồng gió mới”, tạo nên sức sống mới nhằm khắc phục những khó khăn trầm trọng của tình hình KT – XH
+        nước ta nói chung, về nông nghiệp, nông thôn nói riêng. <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1510')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1464')">Kế thừa quan điểm của Đại hội VI, qua các kỳ đại hội và Hội
+            nghị Trung ương, Đảng ta không ngừng nhấn mạnh và khẳng định quyết tâm cao trong thực hiện chủ trương nhất
+            quán đối với nông nghiệp, phát triển một nền nông nghiệp toàn diện.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1511')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1465')">Phát triển mạnh nông nghiệp và kinh tế nông thôn lên sản
+            xuất lớn vừa là vấn đề cấp bách, vừa mang ý nghĩa chiến lược lâu dài.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1512')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1466')">Đại hội đại biểu toàn quốc lần thứ X của Đảng tiếp tục
+            khẳng định: hiện nay và trong nhiều năm tới, vấn đề nông nghiệp, nông dân và nông thôn có tầm chiến lược đặc
+            biệt quan trọng, phải luôn coi trọng CNH, HĐH nông nghiệp, nông thôn hướng tới xây dựng một nền nông nghiệp
+            hàng hóa lớn, đa dạng, phát triển nhanh và bền vững, có năng suất, chất lượng và khả năng cạnh tranh
+            cao.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1513')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1467')">Như vậy, trong bối cảnh tình hình quốc tế và khu vực có
+            nhiều diễn biến phức tạp, khó lường, trong đó có vấn đề an ninh lương thực càng khẳng định chủ trương của
+            Đảng là đúng.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1514')"></a><a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1468')">Sau hơn 20 tiến hành công cuộc đổi mới,
+            nền kinh tế nông nghiệp đã có những bước phát triển đáng kể, đời sống vật chất và tinh thần của cư dân nông
+            thôn từng bước được cải thiện, an ninh chính trị, trật tự an toàn xã hội được giữ vững.</a> <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1515')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1469')">Tuy nhiên, những thành tựu đó vẫn chưa tương xứng với tiềm
+            năng, lợi thế, còn tồn tại nhiều hạn chế, yếu kém.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1516')"></a><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1470')">Nguyên nhân chính của những hạn chế, yếu kém trên chủ yếu
+            do nhận thức về vị trí, vai trò của nông nghiệp, nông dân, nông thôn còn bất cập so với thực tiễn; chưa hình
+            thành một cách có hệ thống các quan điểm lý luận về phát triển nông nghiệp, nông dân, nông thôn; chính sách
+            phát triển còn thiếu đồng bộ, thiếu tính đột phá; việc tổ chức chỉ đạo thực hiện và công tác quản lý nhà
+            nước còn nhiều bất cập, yếu kém.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1517')">Thường xuyên chủ động liên hệ và phối hợp
+            tốt với các ban Đảng của Tỉnh ủy như Ban Tổ chức, Ban Tuyên giáo, Ban Dân vận và các ban trực thuộc Liên
+            đoàn Lao động tỉnh để biên soạn đề cương, tài liệu cho công tác tuyên truyền, giáo dục, kịp thời nắm bắt
+            diễn biến tình hình tư tưởng, các dư luận xã hội trong công nhân, phát hiện để có biện pháp đấu tranh làm
+            thất bại âm mưu, thủ đoạn của các thế lực thù địch thâm nhập vào hoạt động của công nhân để kích động, lôi
+            kéo, chống phá.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1518')">Xây dựng tốt quy chế, chương trình phối hợp
+            giữa giữa công đoàn với cơ quan quân sự tỉnh, huyện và các đơn vị Quân đội đóng quân ở tỉnh Đồng Nai trong
+            việc tổ chức các buổi tuyên truyền, giáo dục về chủ quyền biên giới, biển đảo, về nhiệm vụ bảo vệ Tổ quốc,
+            về sức mạnh chiến đấu của quân đội và những định hướng lớn của Đảng, Nhà nước về giải quyết tranh chấp, kiên
+            quyết, kiên trì đấu tranh với các hoạt động, các hành vi vi phạm chủ quyền của Việt Nam.</a> <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1519')">Thông qua các hoạt động phối hợp tuyên
+            truyền, giáo dục nâng cao nhận thức, xây dựng thái độ, tình cảm, niềm tin vững chắc và ý chí quyết tâm cho
+            công nhân ở tỉnh Đồng Nai luôn an tâm tư tưởng, sẵn sàng hy sinh vì độc lập, tự do của Tổ quốc, vì chủ nghĩa
+            xã hội.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1520')">Các tổ chức, các lực lượng khác trong hệ
+            thống chính trị ở địa phương như Đoàn Thanh niên, Phụ nữ cũng có vai trò hết sức quan trọng trong góp phần
+            giáo dục nâng cao ý thức bảo vệ Tổ quốc cho công nhân.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1521')">Công đoàn cần phối hợp và phát huy sức mạnh tổng hợp, vai
+            trò của từng tổ chức, sát với chức năng, nhiệm vụ từng tổ chức, phù hợp với đối tượng giáo dục nâng cao ý
+            thức bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong các doanh nghiệp tư nhân và doanh nghiệp có vốn đầu tư
+            nước ngoài hiện nay cơ bản là công nhân trong độ tuổi trẻ và công nhân nữ.</a></p>
+    <p><strong>2.2. Một số giải pháp cơ bản phát huy vai trò công đoàn trong giáo dục ý thức bảo vệ Tổ quốc Việt
+            Nam xã hội chủ nghĩa<em> </em>cho công nhân ở tỉnh Đồng Nai hiện nay</strong></p>
+    <p><strong><em>2.2.1. <a class="sentence" onclick="publishMessage('tams_v3_id_21','1523')">Công đoàn cần tăng cường
+                    tuyên truyền, giáo dục cho công nhân nhận thức sâu sắc về đường lối, chủ trương của Đảng, Nhà nước
+                    về nhiệm vụ bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình hiện nay</a> </em></strong></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1524')">Đây là giải pháp giữ vai trò quan trọng hàng
+            đầu, là cơ sở, nền tảng để xây dựng, cũng cố, tăng cường các phẩm chất tâm lý, truyền thống, tình cảm… và
+            góp phần quán triệt, nâng cao năng lực tư duy lý luận về bảo vệ Tổ quốc.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1525')">Vì vậy, nâng cao chất lượng giáo dục chính trị cho công
+            nhân đáp ứng yêu cầu bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa là một trong những giải pháp quan trọng vừa cơ
+            bản, vừa cấp bách hiện nay nhằm hình thành, cũng cố lập trường, quan điểm về bảo vệ Tổ quốc theo hệ tư tưởng
+            của giai cấp công nhân mà trực tiếp là đường lối quân sự, tư duy mới về bảo vệ Tổ quốc của Đảng, vun đắp,
+            bồi dưỡng truyền thống yêu nước và nhân văn của dân tộc Việt Nam.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1526')">Để nâng cao chất lượng giái dục chính trị, tư tưởng cho
+            công nhân ở Đồng Nai đáp ứng yêu cầu sự nghiệp bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa, cần hướng vào các
+            nội dung cơ bản sau:</a></p>
+    <p><em>Một là, </em>tập trung quán triệt sâu sắc đường lối, quan điểm, tư tưởng của Đảng về bảo vệ Tổ quốc, nhấn
+        mạnh nội dung bảo vệ Tổ quốc xã hội chủ nghĩa không chỉ là bảo vệ mặt địa lý - tự nhiên mà còn phải giữ vững chế
+        độ chính trị xã hội chủ nghĩa trong điều kiện tăng cường hội nhập quốc tế hiện nay.<em> </em></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1528')">Ý thức bảo vệ Tổ quốc xã hội chủ nghĩa của
+            mọi người dân Việt Nam hội tụ và gắn bó chặt chẽ giữa ý thức của từng người dân với ý thức xã hội, ý thức cá
+            nhân với ý thức cộng đồng, ý thức của người dân Việt Nam ở trong nước với ý thức người Việt Nam ở nước
+            ngoài.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1529')">Dân tộc Việt Nam là một dân
+            tộc có lòng tự hào, tự tôn dân tộc sâu sắc, có ý thức dân tộc cao, có tinh thần yêu nước nồng nàn.</a> Chủ
+        tịch Hồ Chí Minh khẳng định: “Dân ta có một lòng nồng nàn yêu nước. <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1531')">Đó là một truyền thống quý báu của ta.</a> Từ xưa đến nay,
+        mỗi khi Tổ quốc bị xâm lăng, thì tinh thần ấy lại sôi nổi, nó kết thành một làn sóng vô cùng mạnh mẽ, to lớn, nó
+        lướt qua mọi sự nguy hiểm, khó khăn, nó nhấn chìm tất cả lũ bán nước và lũ cướp nước” [41, tr. 38]. <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1533')">Truyền thống quý báu, động lực tinh thần
+            to lớn này được nẩy nở và phát triển từ tình yêu gia đình, làng xã, quê hương, yêu nhân dân lao động, tinh
+            thần cố kết cộng đồng.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1534')">Vấn đề đặt
+            ra hiện nay là, phải trên cơ sở động lực tinh thần đó mà chuyển biến thành tình yêu chủ nghĩa xã hội, yêu
+            nước gắn với yêu chủ nghĩa xã hội.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1535')">Cần giáo dục nâng cao nhận thức cho công
+            nhân và người lao động hiểu rõ quan điểm, đường lối của Đảng ta về bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa
+            trong tình hình hiện nay mà Đại hội Đại biểu toàn quốc lần thứ XII đã xác định, trong đó bảo vệ Tổ quốc Việt
+            Nam xã hội chủ nghĩa là bảo vệ vững chắc độc lập chủ quyền, thống nhất, toàn vẹn lãnh thổ của Tổ quốc, bảo
+            vệ Đảng, Nhà nước, Nhân dân và chế độ XHCN; bảo vệ công cuộc đổi mới, sự nghiệp công nghiệp hóa, hiện đại
+            hóa, bảo vệ lợi ích quốc gia - dân tộc; bảo vệ nền văn hóa dân tộc; giữ vững môi trường hòa bình, ổn định
+            chính trị, an ninh quốc gia, trật tự, an toàn xã hội; chủ động đấu tranh làm thất bại mọi âm mưu, hoạt động
+            chống phá của các thế lực thù địch.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1536')">Từng bước làm cho công nhân nhận rõ: Đảng và
+            Nhà nước đề ra chủ trương giải quyết tranh chấp, bất đồng hiện nay là một quyết định đúng đắn, chiến lược,
+            nhiệm vụ bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa trong tình hình mới là hoàn toàn nhất quán và lâu dài nhằm
+            khai thác mọi tiềm năng để giữ vững thống nhất, toàn vẹn chủ quyền của Tổ quốc.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1537')">Những chủ trương, đường lối về bảo vệ Tổ quốc Việt Nam xã
+            hội chủ nghĩa đã được thể hiện rất rõ ở các nội dung trong Văn kiện Đại hội XII của Đảng về mục tiêu, nhiệm
+            vụ bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa; về quan điểm chỉ đạo bảo vệ Tổ quốc xã hội chủ nghĩa; về phương
+            châm bảo vệ Tổ quốc xã hội chủ nghĩa; về sức mạnh và lực lượng bảo vệ Tổ quốc xã hội chủ nghĩa.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1538')">Theo quan điểm của Đảng ta hiện nay, bảo vệ
+            không chỉ đơn thuần là ngăn ngừa, chống lại mà còn là xây dựng đất nước vững mạnh; đây là một trong những
+            phương thức tích cực để bảo vệ Tổ quốc.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1539')">Bảo vệ ngay trong quá trình xây dựng, trong xây dựng có bảo
+            vệ và tự bảo vệ; ngăn ngừa không để xảy ra chiến tranh; bảo vệ môi trường hòa bình, ổn định cho công cuộc
+            xây dưng và phát triển của đất nước.</a></p>
+    <p><em>Hai là, </em>chú trọng hơn nữa công tác giáo dục các giá trị chủ nghĩa yêu nước cho công nhân. </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1541')">Chủ nghĩa yêu nước là hệ thống những quan
+            điểm, tư tưởng, tình cảm đối với đất nước, biểu hiện ở tình yêu quê hương, yêu đồng bào; sự cống hiến sức
+            lực, tài năng và trí tuệ, tinh thần xả thân vì sự nghiệp bảo vệ Tổ quốc.</a><em> </em><a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1542')">Nhận thức đúng đắn về Tổ quốc và mục tiêu, nhiệm vụ bảo vệ
+            Tổ quốc trong tình hình mới là yêu cầu quan trọng đầu tiên để nâng cao ý thức bảo vệ Tổ quốc xã hội chủ
+            nghĩa cho công nhân ở tỉnh Đồng Nai hiện nay.</a> Theo đó, cần quán triệt làm cho công nhân nhận thức sâu
+        sắc về phương hướng, mục tiêu, nhiệm vụ bảo vệ Tổ quốc xã hội chủ nghĩa, như Đại hội XII của Đảng đã chỉ rõ:
+        "Phát huy mạnh mẽ sức mạnh tổng hợp của toàn dân tộc, của cả hệ thống chính trị, tranh thủ tối đa sự đồng tình,
+        ủng hộ của cộng đồng quốc tế, kiên quyết, kiên trì đấu tranh bảo vệ vững chắc độc lập, chủ quyền, thống nhất,
+        toàn vẹn lãnh thổ của Tổ quốc, bảo vệ Đảng, Nhà nước, nhân dân và chế độ xã hội chủ nghĩa; bảo vệ công cuộc đổi
+        mới, sự nghiệp công nghiệp hóa, hiện đại hóa, bảo vệ lợi ích quốc gia dân tộc; bảo vệ nền văn hóa dân tộc; giữ
+        vững môi trường hòa bình, ổn định chính trị, an ninh quốc gia, trật tự an toàn xã hội” [15, tr.147-148]. </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1544')">Đồng thời, động viên mọi người dân nêu cao ý
+            thức trách nhiệm thực hiện tốt quyền lợi và nghĩa vụ của mình đối với sự nghiệp bảo vệ Tổ quốc; nêu cao ý
+            thức trách nhiệm góp phần xây dựng quê hương giàu mạnh, giữ vững ổn định chính trị - xã hội, bảo đảm an
+            ninh, trật tự an toàn xã hội, bảo vệ các tổ chức đảng, các tổ chức chính trị - xã hội và nhân dân ở địa
+            phương, cơ sở, nơi sinh sống và hoạt động.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1545')">Ý thức bảo vệ Tổ quốc xã hội chủ nghĩa không
+            phải là một cái gì chung chung, trừu tượng mà bao giờ cũng phải được thể hiện cụ thể ở hành vi bảo vệ Tổ
+            quốc, ở việc thực hiện nghĩa vụ và trách nhiệm đối với sự nghiệp bảo vệ Tổ quốc xã hội chủ nghĩa của mỗi
+            người.</a> </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1546')">Trong tình hình hiện nay, trước tác động
+            tiêu cực từ mặt trái của kinh tế thị trường và sự chống phá của các thế lực thù địch, một bộ phận công nhân
+            có biểu hiện thờ ơ các vấn đề chính trị - xã hội, nhận thức không đầy đủ nhiệm vụ bảo vệ Tổ quốc, thậm chí
+            còn có biểu hiện trốn tránh, tìm cách thoái thác nhiệm vụ khi thực hiện nghĩa vụ bảo vệ Tổ quốc.</a> Thực
+        trạng ấy đòi hỏi phải tăng cường công tác tuyên truyền, giáo dục các giá trị chuẩn mực đạo đức mới kết hợp giáo
+        dục các giá trị truyền thống dân tộc cho công nhân.</p>
+    <p> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1548')">Không thể nói là có tinh thần yêu nước cao
+            nếu người đó không có ý thức bảo vệ Tổ quốc, không sẵn sàng hy sinh vì Tổ quốc.</a> Không thể nói là có ý
+        thức bảo vệ Tổ quốc đầy đủ nếu không thực hiện tốt nghĩa vụ, trách nhiệm của mình đối với Tổ quốc; hoặc coi bảo
+        vệ Tổ quốc là nhiệm vụ riêng của lực lượng vũ trang, còn mình thì “đứng ngoài cuộc”, chỉ biết vun vén lo cho bản
+        thân và gia đình. <a class="sentence" onclick="publishMessage('tams_v3_id_21','1550')">Vì thế, việc giáo dục
+            nâng cao ý thức bảo vệ Tổ quốc xã hội chủ nghĩa cần phải kết hợp chặt chẽ với việc thực hiện các biện pháp
+            về kinh tế, chính trị, tư tưởng, văn hoá, đạo đức và cả pháp luật.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1551')">Vì vậy, giáo dục ý thức bảo vệ Tổ quốc cho công nhân hiện
+            nay còn là kết hợp giáo dục tổng thể các các hệ giá trị của chủ nghĩa yêu nước Việt Nam trong thời đại
+            mới.</a></p>
+    <p> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1552')">Trong tình hình mới, phải chú trọng làm cho
+            toàn bộ hệ thống chính trị, ở tất cả các cấp, các ngành, trong toàn xã hội nhận thức rõ: phát triển kinh tế
+            - xã hội không chỉ nhằm tăng trưởng kinh tế, mà còn phải tạo điều kiện để tăng cường tiềm lực quốc phòng đất
+            nước, tạo cơ sở xây dựng thế trận quốc phòng toàn dân và thế trận an ninh nhân dân.</a> </p>
+    <p><em>Ba là,</em> giáo dục nâng cao tinh thần cảnh giác cách mạng cho công nhân, người lao động; tích cực tham gia
+        đấu tranh làm thất bại mọi âm mưu, hành động chống phá của các thế lực thù địch.</p>
+    <p>Xuất phát từ đặc điểm của Đồng Nai là một trong những địa phương tập trung nhiều khu công nghiệp với số lượng
+        công nhân lớn, cho nên Đồng Nai cũng chính là một trong những địa bàn quan trọng trong chiến lược “diễn biến hòa
+        bình”của kẻ thù và các thế lực thù địch nhằm kích động tạo ra những cuộc biểu tình, bạo động, gây rối làm mất ổn
+        định về chính trị, làm phương hại đến các quan hệ đối ngoại. Hiện nay, các thế lực thù địch đang ráo riết đẩy
+        mạnh chiến lược “diễn biến hòa bình” kết hợp với bạo loạn lật đổ chống phá cách mạng nước ta, nhằm xoá bỏ Tổ
+        quốc Việt Nam xã hội chủ nghĩa của nhân dân ta. Những mưu toan xóa bỏ sự lãnh đạo của Đảng Cộng sản Việt Nam,
+        thủ tiêu chế độ xã hội chủ nghĩa của nhân dân ta được các thế lực thù địch thực hiện ráo riết vừa công khai
+        trắng trợn, vừa che giấu kín đáo trong các quan hệ kinh tế, thương mại, văn hoá, làm cho sự chống phá càng trở
+        nên nguy hiểm.</p>
+    <p>Đại hội XII của Đảng chỉ ra những nguy cơ lớn đối với đất nước ta vẫn tiếp tục<strong> </strong>còn tồn tại,
+        trong đó<strong> </strong>“diễn biến hòa bình” có mặt còn diễn biến phức tạp hơn<strong>,</strong> với những thủ
+        đoạn mới, nhất là triệt để sử dụng những phương tiện truyền thông để lôi kéo, kích động quần chúng nhân dân, lực
+        lượng trẻ, trong đó có công nhân nhằm thực hiện “tự diễn biến”, “tự chuyển hóa” trong nội bộ ta. <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1558')">Bên cạnh đó, nhiệm vụ bảo vệ Tổ quốc XHCN,
+            bảo vệ chủ quyền biển, đảo đứng trước nhiều khó khăn, thách thức lớn; tình hình chính trị - xã hội ở một số
+            địa bàn còn tiềm ẩn nguy cơ mất ổn định.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1559')">Tình hình thế giới, trong nước có cả thuận
+            lợi, thời cơ và khó khăn, thách thức đan xen; đặt ra nhiều vấn đề mới, yêu cầu mới to lớn, phức tạp hơn đối
+            với sự nghiệp xây dựng và bảo vệ Tổ quốc Việt Nam XHCN, bảo vệ độc lập, chủ quyền, thống nhất, toàn vẹn lãnh
+            thổ của đất nước.</a> <a class="sentence" onclick="publishMessage('tams_v3_id_21','1560')">Trong điều kiện
+            đó, công cuộc bảo vệ Tổ quốc xã hội chủ nghĩa của nhân dân ta càng trở nên khó khăn phức tạp hơn, đòi hỏi
+            chúng ta luôn phải tỉnh táo, nêu cao tinh thần cảnh giác cách mạng và ý thức quốc phòng, bảo vệ Tổ quốc cho
+            các tầng lớp nhân dân; động viên, hướng dẫn, tạo điều kiện cho mọi người dân tích cực tham gia đấu tranh làm
+            thất bại mọi âm mưu, hành động chống phá của các thế lực thù địch.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1561')">Chú trọng hơn nữa việc giáo dục nâng cao tinh thần cảnh
+            giác cách mạng, trình độ và khả năng xử lý vấn đề đối tác và đối tượng cho công nhân, đặc biệt là lực lượng
+            công nhân đang làm việc trong các khu công nghiệp có vốn đầu tư nước ngoài.</a> </p>
+    <p>Hiện nay, không phải không có người còn tỏ ra lo ngại rằng, nếu quá kiên quyết đấu tranh thì sẽ làm “ảnh hưởng”
+        đến quá trình hợp tác kinh tế quốc tế, nước ta sẽ bị cô lập, gây “bất lợi” cho sự nghiệp đổi mới. <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1563')">Cần nhận thức đúng đắn vấn đề này; Đấu
+            tranh làm thất bại âm mưu, hoạt động phá hoại của các thế lực thù địch không làm cản trở mà chính là do nhu
+            cầu, đòi hỏi của sự nghiệp đổi mới đất nước.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1564')">Vấn đề đặt ra ở đây là phải biết đấu tranh, môi trường hoà
+            bình, ổn định, thuận lợi, định hướng xã hội chủ nghĩa của sự phát triển đất nước chỉ có thể có được và giữ
+            vững được nếu chúng ta biết đấu tranh làm thất bại mọi âm mưu, hoạt động chống phá cách mạng Việt Nam của
+            các thế lực thù địch.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1565')">Trong bối cảnh mới của sự mở rộng hợp tác và
+            hội nhập quốc tế, việc nhận thức và xử lý mối quan hệ giữa đối tác và đối tượng là vấn đề rất phức tạp và
+            đặc biệt nhạy cảm; mọi sự sơ xuất dù là nhỏ trong vấn đề này đều có thể dẫn đến những bất lợi, có hại đối
+            với sự nghiệp xây dựng và bảo vệ Tổ quốc của nhân dân ta.</a> Cần quán triệt sâu sắc quan điểm và nguyên tắc
+        của Đảng trong vấn đề này: “Những ai chủ trương tôn trọng độc lập chủ quyền, thiết lập và mở rộng quan hệ hữu
+        nghị và hợp tác bình đẳng, cùng có lợi với Việt Nam đều là đối tác của chúng ta. <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1567')">Bất kể thế lực nào có âm mưu và hành động chống phá mục
+            tiêu của chúng ta trong sự nghiệp xây dựng và bảo vệ Tổ quốc đều là đối tượng đấu tranh"; có cách nhìn nhận
+            biện chứng: trong mỗi đối tượng vẫn có thể có mặt cần tranh thủ, hợp tác; trong một số đối tác, có thể có
+            mặt khác biệt, mâu thuẫn với lợi ích của ta.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1568')">Trên cơ sở đó, cần khắc phục cả hai khuynh hướng mơ hồ mất
+            cảnh giác hoặc cứng nhắc trong nhận thức, chủ trương và trong xử lý các tình huống cụ thể.</a></p>
+    <p>Cần thấu triệt hơn nữa và vận dụng sáng tạo, linh hoạt phương châm “dĩ bất biến, ứng vạn biến” của Chủ tịch Hồ
+        Chí Minh trong tình hình mới. Làm cho công nhân nhận thức đúng, những cái gì là “bất biến” phải kiên định, để có
+        thể “vạn biến” được với tình hình, không được chao đảo, dao động những vấn đề nguyên tắc, “bất biến”. <a
+            class="sentence" onclick="publishMessage('tams_v3_id_21','1571')">Sự lãnh đạo duy nhất của Đảng Cộng sản
+            Việt Nam, định hướng xã hội chủ nghĩa, độc lập chủ quyền, thống nhất, toàn vẹn lãnh thổ, an ninh quốc gia,
+            lợi ích đất nước, bản sắc văn hoá dân tộc, cuộc sống hoà bình của nhân dân.</a>.. là những cái “bất biến”,
+        phải kiên quyết bảo vệ, giữ gìn. </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1573')">Giáo dục ý thức bảo vệ Tổ quốc xã hội chủ
+            nghĩa cho công nhân là trách nhiệm của Đảng, Nhà nước, của cả hệ thống chính trị mà trước hết là các cấp
+            công đoàn gắn với việc thực hiện các nhiệm vụ kinh tế - xã hội, xoá đói giảm nghèo, thực hiện dân chủ, công
+            bằng, nâng cao đời sống vật chất và tinh thần của công nhân, người lao động.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1574')">Trong tình hình hiện nay, cần tiếp tục đẩy mạnh và nâng cao
+            tính thiết thực, hiệu quả thực hiện việc học tập và làm theo tư tưởng, tấm gương đạo đức, phong cách Hồ Chí
+            Minh; động viên công nhân nỗ lực quyết tâm phấn đấu thực hiện thắng lợi mục tiêu dân giàu, nước mạnh, dân
+            chủ, công bằng, văn minh.</a></p>
+    <p><strong><em>2.2.2. <a class="sentence" onclick="publishMessage('tams_v3_id_21','1575')">Tích cực, chủ động và tổ
+                    chức tốt việc đưa công nhân tham gia vào các hoạt dộng thực tiễn để giáo dục nâng cao ý thức bảo vệ
+                    Tổ quốc Việt Nam xã hội chủ nghĩa</a></em></strong></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1576')">Gắn với hoạt động thực tiễn tự học tập, tự
+            rèn luyện, thông qua hoạt động thực tiễn xây dựng và bảo vệ Tổ quốc Việt Nam xã hội chủ nghĩa là một trong
+            những giải pháp quan trọng để phát huy năng lực và vai trò công đoàn trong giáo dục nâng cao ý thức bảo vệ
+            Tổ quốc Việt Nam xã hội chủ nghĩa cho công nhân ở tỉnh Đồng Nai hiện nay.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1577')">Để phát huy vai trò của mình, công đoàn cần tích cực chủ
+            động tổ chức tốt việc đưa công nhân tham giai vào các hoạt động thực tiễn xây dựng và bảo vệ Tổ quốc</a>
+    </p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1578')">Kinh nghiệm thực tiễn xây dựng ý thức bảo vệ
+            Tổ quốc Việt Nam XHCN cũng như công tác tuyên truyền, vận động, giáo dục của công đoàn các cấp ở Đồng Nai
+            nói chung những năm qua đều khẳng định rằng, giáo dục nâng cao ý thức bảo vệ Tổ quốc Việt Nam XHCN cho công
+            nhân hiện nay phải gắn chặt với việc tổ chức tốt các hoạt động, các phong trào thực tiễn thi đua yêu nước
+            cho công nhân và người lao động.</a> <a class="sentence"
+            onclick="publishMessage('tams_v3_id_21','1579')">Bởi vì, ý thức bảo vệ Tổ quốc Việt Nam XHCN của người công
+            nhân không phải do tự phát hình thành và phát triển mà được hình thành và phát triển thông qua con đường
+            giáo dục, tự giáo dục và thông qua việc tổ chức các hoạt động, các phong trào thực tiễn xây dựng và bảo vệ
+            Tổ quốc XHCN trên tất cả các lĩnh vực của đời sống xã hội.</a></p>
+    <p><a class="sentence" onclick="publishMessage('tams_v3_id_21','1580')">Để giáo dục ý thức bảo vệ Tổ quốc Việt Nam
+            xã hội chủ nghĩa cho công nhân ở tỉnh Đồng Nai hiện nay, cùng với các hình thức tuyên truyền, giáo dục như
+            tuyên truyền miệng, cấp phát tờ rơi, tài liệu…công đoàn cần phải tạo ra các hoạt động, phong trào thi đua
+            yêu nước thiết thực; lôi cuốn, đưa họ vào các phong trào, các hoạt động để giáo dục; cần phải tạo điều kiện
+            môi trường cho công nhân, người lao động góp sức, góp công, góp của, góp trí tuệ, tài năng vào công cuộc xây
+            dựng và bảo vệ Tổ quốc; đó cũng chính là cách tốt nhất để nâng cao ý thức bảo vệ Tổ quốc Việt Nam xã hội chủ
+            nghĩa cho công nhân ở tỉnh Đồng Nai hiện nay.</a></p>
+            <p><span class="sentence" onclick="publishMessage('tams_v3_id_22','1581')">Để giáo dục ý thức bảo vệ Tổ quốc Việt Nam
+                xã hội chủ nghĩa cho công nhân ở tỉnh Đồng Nai hiện nay.</span></p>
+    <script>function startConnect() {
+            clientID = "clientID - " + parseInt(Math.random() * 1000);
+            host = "broker.emqx.io";
+            port = 8083;
+            client = new Paho.MQTT.Client(host, Number(port), clientID);
+
+            client.onConnectionLost = onConnectionLost;
+            client.onMessageArrived = onMessageArrived;
+
+            client.connect({
+                onSuccess: onConnect
+                //        userName: userId,
+                //       passwordId: passwordId
+            });
+        }
+
+        function onConnect() {
+            topic = "tams";
+            client.subscribe(topic);
+            console.log("start");
+        }
+
+        function onConnectionLost(responseObject) {
+            document.getElementById("messages").innerHTML += "<span> ERROR: Connection is lost.</span><br>";
+            if (responseObject != 0) {
+                document.getElementById("messages").innerHTML += "<span> ERROR:" + responseObject.errorMessage + "</span><br>";
+            }
+        }
+
+        function onMessageArrived(message) {
+            console.log("OnMessageArrived: " + message.payloadString);
+            // document.getElementById("messages").innerHTML += "<span> Topic:"+message.destinationName+"| Message : "+message.payloadString + "</span><br>";
+        }
+
+        function startDisconnect() {
+            client.disconnect();
+            // document.getElementById("messages").innerHTML += "<span> Disconnected. </span><br>";
+        }
+
+        function publishMessage(topic, message) {
+            msg = message;
+            // topic = "tams";
+
+            Message = new Paho.MQTT.Message(msg);
+            Message.destinationName = topic;
+
+            client.send(Message);
+            // document.getElementById("messages").innerHTML += "<span> Message to topic "+topic+" is sent </span><br>";
+            console.log("Info: ", topic + message)
+        }
+
+        $(document).ready(function () {
+            console.log("Connect");
+            startConnect();
+            // publishMessage();
+        });</script>
+</body>
+
+</html>

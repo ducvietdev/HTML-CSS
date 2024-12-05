@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Object-Fit</title>
+        <style>
+            img {
+                width: 400px;
+                height: 400px;
+                /* Giữ kích thước khung hình nhưng 
+                thay đổi hình ảnh phù hợp với kích thước khung hình đó */
+                /* object-fit: cover; */
+                /* Giữ kích thước khung hình nhưng thay đổi 
+                kích thước ảnh chỉ định chứa toàn bộ ảnh */
+                object-fit: contain;
+                object-fit: fill;
+                /* object-fit: scale-down; */
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Sử dụng Object-fit: Cover</h2>
+        <img src="https://hifoto.vn/wp-content/uploads/2020/08/2017-04-24-17-54-04-C-768x1150-1.jpg">
+    </body>
+</html>

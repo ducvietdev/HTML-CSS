@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            html, body {
+                background-color: #333;
+            }
+
+            .frame {
+                width: 400px;
+                height: 300px;
+                border-radius: 50%;
+                background-color: #000;
+                margin-left: 500px;
+                position: relative;
+            }
+
+            
+            .frame::after {
+                position: absolute;
+                content: "";
+                width: 400px;
+                height: 300px;
+                border-radius: 50%;
+                background-color: yellow;
+                transform: scale(0.9);
+                z-index: 1;
+            }
+
+            .body-bat {
+                margin-top: 48px;
+                left: 13%;
+                width: 300px;
+                height: 200px;
+                background-color: #000;
+                border-radius: 50%;
+                position: absolute;
+                z-index: 2;
+            }
+
+            .bat-head {
+                position: absolute;
+                width: 25px;
+                border-width: 30px;
+                border-style: solid;
+                border-color: yellow transparent transparent;
+                left: 37%;
+            }
+
+            .wing-bat-top {
+                position: absolute;
+                border-width: 40px;
+                border-style: solid;
+                border-color: yellow transparent transparent;
+                left: 26%;
+                top: -40px;
+                transform: rotate(210deg);
+                
+            }
+
+            .body-bat::before {
+                content: "";
+                position: absolute;
+                border-width: 40px;
+                border-style: solid;
+                border-color: yellow transparent transparent;
+                left: 50%;
+                top: -40px;
+                transform: rotate(150deg);
+            }
+
+            .wing-bat-mid {
+                position: absolute;
+                width: 78px;
+                height: 50px;
+                background-color: yellow;
+                border-radius: 0 0 50px 40px;
+                top: 31px;
+                left: 16%;
+                transform: rotate(30deg);
+            }
+
+            .body-bat::after {
+                content: "";
+                position: absolute;
+                width: 78px;
+                height: 50px;
+                background-color: yellow;
+                border-radius: 0 0 50px 40px;
+                top: 15.2%;
+                left: 61%;
+                transform: rotate(-30deg);
+            }
+
+            .wing-bat-bottom {
+                position: absolute;
+                width: 80px;
+                height: 40px;
+                background-color: yellow;
+                border-radius: 50%;
+                bottom: 0;
+                left: 42%;
+                transform: rotate(110deg);
+                box-shadow: -20px -20px 0 0 yellow;
+            }
+
+            .wing-bat-bottom::after {
+                content: "";
+                position: absolute;
+                width: 80px;
+                height: 40px;
+                background-color: yellow;
+                border-radius: 50%;
+                top: 27px;
+                left: 10px;
+                transform: rotate(140deg);
+                box-shadow: 20px -20px 0 0 yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="frame">
+            <div class="body-bat">
+                <div class="wing-bat-top"></div>
+                <div class="bat-head"></div>
+                <div class="wing-bat-mid"></div>
+                <div class="wing-bat-bottom"></div>
+            </div>
+        </div>
+    </body>
+</html>

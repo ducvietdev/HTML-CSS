@@ -1,0 +1,29 @@
+/* * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} */
+
+#shape {
+    width: 80px;
+    height: 150px;
+    background-color: orange;
+    position: relative;
+}
+
+#shape:after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: #fff;
+    top: 80%;
+    rotate: calc(-30deg);
+}

@@ -1,0 +1,35 @@
+<!-- Dịch chuyển background theo ý muốn
+. Dùng keyword - Dùng tham số - Dùng kết hợp cả tham số và keyword -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đệm, viền và khoảng lề</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            html, body{
+                margin: 0;
+            }
+
+            .box{
+                width: 100%;
+                height: 100vh;
+                background-image: 
+                url(https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-g%C3%A1i-%C4%91%E1%BA%B9p-cute-819x1024.jpg);
+                background-size: 300px;
+                background-repeat: no-repeat;
+                /* Nếu mà chỉ viết một giá trị thì giá trị thứ 2 ngầm hiểu là center, 
+                và có thể dùng giá trị âm */
+                /* background-position: bottom right; */
+                /* background-position: bottom 20px right 20px; */
+                /* background-position: 50px 100px; 
+                - 2 tham số này tương ứng với trục x, trục y*/
+
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Animation</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .loader {
+                width: 200px;
+                height: 200px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+            }
+
+            .loader div {
+                position: absolute;
+            }
+
+            /* Dùng 2 thẻ div để tạo hiệu ứng chạy qua chạy lại */
+            .loader div:nth-child(1){
+                width: 100px;
+                height: 100px;
+                background-color: #f7004d;
+                border-radius: 100rem;
+                animation: spinner 1s linear infinite;
+                animation-delay: 0.5s;
+            }
+
+            .loader div:nth-child(2){
+                width: 100px;
+                height: 100px;
+                background-color: #3affff;
+                border-radius: 100rem;
+                animation: spinner 1s linear infinite;
+            }
+
+            /* Dùng thêm thẻ div thứ 3 để tạo cảm giác 2 hình tròn chồng lên nhau */
+            .loader div:nth-child(3){
+                width: 100px;
+                height: 100px;
+                background-color: #f7004d;
+                border-radius: 100rem;
+                animation: spinner2 1s linear infinite;
+                animation-delay: 0.5s;
+            }
+
+            @keyframes spinner {
+                0% {
+                    transform: translateX(0); 
+                }
+                50% {
+                    transform: translateX(100px); 
+                }
+                0% {
+                    transform: translateX(0); 
+                }
+            }
+
+            @keyframes spinner2 {
+                0% {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+                49.99% {
+                    opacity: 1;
+                    transform: translateX(100px);
+                }
+                50% {
+                    opacity: 0;
+                    transform: translateX(100px);
+                }
+                100% {
+                    opacity: 0;
+                    transform: translateX(0);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,158 @@
+<!-- Cách 1: -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Align Dropdown</title>
+        <style>
+
+            .dropdown {
+                display: inline-block;
+                position: relative;
+            }
+
+            .dropdown .drop-btn {
+                display: inline-block;
+                background-color: #4CAF50;
+                padding: 16px;
+                text-decoration: none;
+                color: #fff;
+            }
+
+            .drop-content .drop-list {
+                display: none;
+                background-color: #ccc;
+                list-style-type: none;
+                min-width: 120px;
+                transform: translateY(-12.5%);
+                box-shadow: 0 16px 8px 0 rgba(0, 0, 0, 0.25);
+                cursor: pointer;
+            }
+
+            .drop-list li {
+                padding: 12px 16px;
+                margin-left: -40px;
+            }
+
+            .drop-btn:hover {
+                background-color: #3e8e41;
+            }
+
+            .dropdown:hover .drop-list {
+                display: block;
+            }
+
+            .drop-list li:hover {
+                background-color: #ddd;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Aligned Dropdown Content</h2>
+        <p>Determine whether the dropdown content should go from left to right or right to left with the left and right properties.</p>
+        <div class="dropdown">
+            <a class="drop-btn" href="#">Left</a>
+            <div class="drop-content" style="left: 0;">
+                <ul class="drop-list">
+                    <li><a href="#"></a>Link1</li>
+                    <li><a href="#"></a>Link2</li>
+                    <li><a href="#"></a>Link3</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float: right;">    
+            <a class="drop-btn" href="#">Right</a>
+            <div class="drop-content" style="right: 0; position: fixed;">
+                <ul class="drop-list" style="margin-right: 8px;">
+                    <li><a href="#"></a>Link1</li>
+                    <li><a href="#"></a>Link2</li>
+                    <li><a href="#"></a>Link3</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- Cách 2: -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Align Drop</title>
+        <style>
+            html {
+                font-family: Arial, Helvetica, sans-serif;
+            }
+
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropbtn {
+                border: none;
+                background-color: #4CAF50;
+                color: #fff;
+                padding: 16px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+
+            .dropdown-content {
+                position: absolute;
+                display: none;
+                background-color: #f9f9f9;
+                min-width: 140px;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+                right: 0;
+            }
+
+            .dropdown-content a {
+                display: block;
+                text-decoration: none;
+                padding: 12px 16px;
+                color: #000;
+            }
+
+            .dropbtn:hover {
+                background-color: #3e8e41;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #f1f1f1;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h2>Aligned Dropdown Content</h2>
+        <p>Determine whether the dropdown content should go from left to right or right to left with the left and right properties.</p>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn">Left</button>
+            <div class="dropdown-content" style="left:0;">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float:right;">
+            <button class="dropbtn">Right</button>
+            <div class="dropdown-content">
+                <a href="#">Link 1</a>
+                <a href="#">Link 2</a>
+                <a href="#">Link 3</a>
+            </div>
+        </div>
+    </body>
+</html> -->

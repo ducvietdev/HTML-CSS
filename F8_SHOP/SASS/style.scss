@@ -1,0 +1,12 @@
+html {
+    font-size: 100%;
+}
+
+$textColor: red;
+$background: blue;
+$font-size: 50px;
+p {
+    color: $textColor;
+    background-color: $background;
+    font-size: $font-size;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid Container</title>
+        <style>
+            .grid-container {
+                /* Grid có thể sử dụng các thuộc tính căn chỉnh như Flex */
+                display: grid;
+                background-color: blueviolet;
+                /* Thể hiện chiều rộng của một cột,
+                Số giá trị thể hiện số cột */
+                grid-template-columns: 50px auto auto 100px;
+                padding: 10px;
+                grid-gap: 10px;
+                /* Thể hiện chiều cao của một hàng */
+                grid-template-rows: 80px 100px;
+            }
+
+            .grid-item {
+                background-color: aqua;
+                font-size: 20px;
+                text-align: center;
+                border: 1px solid #000;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Sử dụng Grid Template</h2>
+        <div class="grid-container">
+            <div class="grid-item">1</div>
+            <div class="grid-item">2</div>
+            <div class="grid-item">3</div>
+            <div class="grid-item">4</div>
+            <div class="grid-item">5</div>
+            <div class="grid-item">6</div>
+            <div class="grid-item">7</div>
+            <div class="grid-item">8</div>
+        </div>
+    </body>
+</html>

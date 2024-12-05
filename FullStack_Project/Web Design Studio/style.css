@@ -1,0 +1,422 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-color: rgba(192, 192, 192, 0.9);
+    font-weight: 700;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+.btn {
+    /* padding: 8px; */
+    border-radius: 5px;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 60%);
+    color: #000;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    transition: 0.5;
+}
+
+.btn:hover {
+    background-color: #000;
+    color: #fff;
+    transform: scale(1.1);
+    text-shadow: 1px 1px 1px rgb(0 0 0);
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 50%);
+    letter-spacing: 1.6px;
+    transition: 0.5;
+    border-radius: 5px;
+}
+
+/* Nav */
+.nav-container {
+    font-size: 16px;
+    background: rgba(192, 192, 192, 0.9);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /* padding: 10px; */
+    justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+}
+
+.nav-brand {
+    background-color: #ccc;
+    padding: 20px;
+    cursor: pointer;
+}
+
+.nav-brand i {
+    margin-right: 5px;
+}
+
+.nav-brand:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0px 1px rgb(0 0 0 / 30%);
+}
+
+/* .nav-menu {
+
+} */
+
+.nav-menu-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.nav-menu-list a{
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.nav-menu-list a:hover{
+    background-color: #000;
+    color: #fff;
+}
+
+/* Header */
+#header-container {
+    width: 100%;
+    height: 855px;
+    background: url("https://images.adsttc.com/media/images/5c69/7739/284d/d1af/7400/0212/slideshow/03%E5%89%8D%E5%8F%B03.jpg?1550415664") no-repeat center center / cover;
+    position: relative;
+}
+
+.header-main {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* Bởi vì sử dụng display flex nên nếu sử dụng max-width 
+    thì nó chỉ tác dụng lên phần được flex 
+    Còn sử dụng width: 100% thì nó sẽ thể hiện theo cha là .header-container*/
+    width: 100%;
+}
+
+.header-content {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.header-content::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    background-color: #333;
+    height: 1px;
+    box-shadow: 0px 0px rgb(0 0 0 / 20%);
+    border: 1px solid;
+    left: 0;
+    bottom: 0;
+}
+
+.header-content h1 {
+    font-size: 70px;
+    margin-bottom: 10px;
+    color: rgba(220, 220, 210, 0.9);
+}
+
+.header-content h3 {
+    font-size: 24px;
+    padding: 10px 0;
+    text-shadow: 1px 1px 1px rgb(0 0 0 / 60%);
+    color: #000;
+    margin-bottom: 10px;
+}
+
+.header-button {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    display: block;
+    padding: 10px 0;
+}
+
+.header-button button {
+    box-shadow: 3px 3px 3px rgb(0 0 0 / 50%);
+}
+
+.header-button button + button {
+    margin-left: 10px;
+}
+
+.header-button i {
+    font-size: 18px;
+}
+
+.header-button span {
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+/* Introduce */
+#intro-main {
+    position: relative;
+    height: 100%;
+    background: url("https://68.media.tumblr.com/eb2382a5a4c996cfdab27bc0d1eb51ff/tumblr_nt5umxS1FY1ud7rr3o1_540.jpg") no-repeat center center / cover;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    font-size: 24px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+}
+
+.clearfix {
+    position: absolute;
+    box-shadow: #fff;
+}
+
+.intro-content {
+    margin: auto;
+    padding: 100px;
+    width: 80%;
+    margin-top: 50px        ;
+}
+
+.intro-content h1 {
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.intro-content p {
+    line-height: 1.4;
+    font-size: 22px;
+}
+
+.intro-image {
+    position: absolute;
+    left: 66.67%;
+    top: 50%;
+    transform: translate(-66.67%, -50%);
+    /* margin: auto; */
+}
+
+.intro-image img{
+    width: 20rem;
+    border-radius: 50%;
+}
+
+/* Portfolio */
+#portfolio {
+    background: url("https://68.media.tumblr.com/d3fd545cd977a174beef12c1106880bf/tumblr_nt505iKkul1ud7rr3o1_1280.jpg") no-repeat center center / cover;
+}
+
+.portfolio-container {
+    text-align: center;
+    width: 970px;
+    margin: auto;
+}
+
+.portfolio-header {
+    padding: 15px;
+}
+
+.portfolio-header h1 {
+    margin-top: 100px;
+    font-size: 42px;
+}
+
+.portfolio-header p {
+    margin: 20px 0 10px 0;
+    font-size: 24px;
+    font-weight: 550;
+}
+
+.portfolio-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.portfolio-item {
+    padding: 0 15px;
+    border: 1px solid #fff;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.portfolio-item:hover {
+    transition: 0.5s;
+    box-shadow: 5px 10px 5px rgb(0 0 0 / 90%);
+}
+
+.portfolio-list .portfolio-caption {
+    background-color: rgba(0,0,0, 0.8);
+    padding: 25px;
+}
+
+.portfolio-item .portfolio-caption {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    color: #fff;
+}
+
+.portfolio-caption p {
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 600;
+}
+
+
+.portfolio-list .portfolio-item  a{
+    position: relative;
+    overflow: hidden;
+    display: block;
+    /* width: 100%;
+    height: 100%; */
+}
+
+.portfolio-list img {
+    width: 100%;
+    display: block;
+}
+
+.portfolio-hover {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    transform: translate(-50%, -25%);
+    top: 50%;
+    left: 50%;
+    height: 100%;
+    width: 100%;
+}
+
+.portfolio-hover .portfolio-hover-content {
+    position: relative;
+    color: #000;
+    
+}
+
+.portfolio-hover-content::after {
+    content: "";
+    position: absolute;
+    border: 2px solid #000;
+    width: 20%;
+    height: 1px;
+    background-color: #000;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.portfolio-item a:hover .portfolio-hover{
+    display: block;
+    z-index: 2;
+}
+
+.portfolio-item a:hover {
+    background: #000;
+    opacity: 0.8;
+    z-index: 100;
+}
+
+/* Check */
+#check-main {
+    height: 755px;
+    background: url("https://68.media.tumblr.com/ac46aa24b44b5036e9200abb71f810d9/tumblr_nt5vzxV6Us1ud7rr3o1_1280.jpg") no-repeat center center / cover;
+    padding: 100px 150px;
+    width: 100%;
+    position: relative;
+}
+
+.check-content {
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 32px;
+    padding: 0 0 0 50px;
+    overflow: hidden;
+    max-width: 100%;
+    position: absolute;
+    width: 650px;
+}
+
+.check-content a:hover {
+    color: rgba(24,39,40, 0.8);
+    font-weight: bold;
+    font-size: 32px;
+    text-decoration: underline !important;
+}
+
+.check-list {
+    float: right; 
+    overflow: hidden; 
+    max-width: 70%;
+    width: 320px;
+    z-index: 1;
+    padding: 0 0px 0 100px;
+}
+
+.check-list button {
+    margin-bottom: 20px;
+    font-size: 16px;  
+    max-width: 100%;  
+    font-weight: 600; 
+    background: #C0C0C0;  
+}
+
+.check-list i {
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+/* Footer */
+#footer {
+    padding: 50px 0;
+    margin-left: 150px;
+}
+
+.footer-list {
+    max-width: 100%;
+    display: flex;
+}
+
+.footer-list li {
+    display: inline-block;
+}
+
+.footer-list a {
+    color: #337AB7;
+    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.footer-list a:hover {
+    color: #23527c;
+    text-decoration: underline;
+}
+
+.footer-list .footer-list-item {
+    padding: 0 5px;
+}
+
+.footer-list .footer-list-divider {
+    padding: 0 5px;
+}
+
+.footer-container p {
+    margin-top: 20px;
+    font-size: 12px;
+    color: #777777;
+    padding: 0 5px;
+}

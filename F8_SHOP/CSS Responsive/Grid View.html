@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grid View</title>
+
+        <style>
+
+            /* Cái này sẽ giúp khi padding lên thì vẫn giữ nguyên kích thước */
+            * {
+                box-sizing: border-box;
+            }
+
+            #header {
+                padding: 15px;
+                border: 1px solid red;
+            }
+
+
+            /* C1: #menu: float left và #content có float: left / right
+            C2:  #menu dùng display: inline-block còn #content float: right */
+            #menu {
+                display: inline-block;
+                width: 25%;
+                padding: 15px;
+                border: 1px solid red;
+            }
+
+            #menu .content-list {
+            
+                margin: 16px 0;
+            }
+
+            #content {
+                float: right;
+                width: 75%;
+                padding: 15px;
+                border: 1px solid red;
+            
+            }
+
+            #content h1 {
+                margin: 22px 0;
+            }
+
+            #content p {
+                margin: 16px 0;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="main">
+            <div id="header">
+                <h1>Chania</h1>
+            </div>
+
+            <div id="menu">
+                <ul class="content-list">
+                    <li>The Flight</li>
+                    <li>The City</li>
+                    <li>The Island</li>
+                    <li>The Food</li>
+                </ul>
+            </div>
+
+            <div id="content">
+                <h1>The City</h1>
+                <p>Chania is the capital of the Chania region on the island of Crete. The city can be divided in two parts, the old town and the modern city.</p>
+                <p>Resize the browser window to see how the content respond to the resizing.</p>
+            </div>
+        </div>
+    </body>
+</html>

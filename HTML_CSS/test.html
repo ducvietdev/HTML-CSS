@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Example</title>
+      <style>
+         p {
+            line-height: 1.8; /* Tăng khoảng cách giữa các dòng chữ */
+        }
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: visible; /* Luôn hiển thị */
+            width: 8px;
+            color: #fff;
+            text-align: center;
+            border-radius: 3px;
+            padding: 2px 2px; /* Giảm độ cao bằng cách giảm padding */
+            position: absolute;
+            z-index: 1;
+            bottom: 100%; /* Vị trí tooltip phía trên văn bản */
+            left: 0; /* Căn trái */
+            opacity: 0.7; /* Độ mờ xuyên suốt */
+            font-size: 10px;
+        }
+
+        /* Mũi tên nhỏ phía dưới tooltip */
+        .tooltip .tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 100%; /* Đặt mũi tên ở phía dưới tooltip */
+            left: 50%; /* Căn giữa theo chiều ngang */
+            transform: translateX(-50%); /* Dịch chuyển để căn giữa */
+            border-width: 2px; /* Giảm kích thước mũi tên */
+            border-style: solid;
+        }
+        .highlight {
+            line-height: 1; /* Đảm bảo chiều cao của đoạn text không tăng */
+            padding: 2px 0; /* Đảm bảo padding tối thiểu để không làm tăng chiều cao dòng */
+        }
+        /* bảy sắc cầu vồng */
+        .tooltip .tooltiptext-1{
+            background-color: #FF0000; /* Màu nền của số */
+        }
+        .tooltip .tooltiptext-1::after{
+            border-color: #FF0000 transparent transparent transparent; /* Màu mũi tên */
+        }
+        .highlight-1{
+            color: #fff; /* Màu chữ */
+            background-color: #FF0000; /* Màu nền nổi bật */
+        }
+
+        .tooltip .tooltiptext-2{
+            background-color: #FF7F00; /* Màu nền của số */
+        }
+        .tooltip .tooltiptext-2::after{
+            border-color: #FF7F00 transparent transparent transparent; /* Màu mũi tên */
+        }
+        .highlight-2{
+            color: #fff; /* Màu chữ */
+            background-color: #FF7F00; /* Màu nền nổi bật */
+        }
+
+        .tooltip .tooltiptext-3{
+            background-color: #FFFF00; /* Màu nền của số */
+        }
+        .tooltip .tooltiptext-3::after{
+            border-color: #FFFF00 transparent transparent transparent; /* Màu mũi tên */
+        }
+        .highlight-3{
+            color: #000; /* Màu chữ */
+            background-color: #FFFF00; /* Màu nền nổi bật */
+        }
+
+        .tooltip .tooltiptext-4{
+            background-color: #00FF00; /* Màu nền của số */
+        }
+        .tooltip .tooltiptext-4::after{
+            border-color: #00FF00 transparent transparent transparent; /* Màu mũi tên */
+        }
+        .highlight-4{
+            color: #000; /* Màu chữ */
+            background-color: #00FF00; /* Màu nền nổi bật */
+        }
+
+          .tooltip .tooltiptext-5{
+            background-color: #0000FF; /* Màu nền của số */
+        }
+        .tooltip .tooltiptext-5::after{
+            border-color: #0000FF transparent transparent transparent; /* Màu mũi tên */
+        }
+        .highlight-5{
+            color: #fff; /* Màu chữ */
+            background-color: #0000FF; /* Màu nền nổi bật */
+        }
+
+        .tooltip .tooltiptext-6{
+            background-color: #4B0082; /* Màu nền của số */
+        }
+        .tooltip .tooltiptext-6::after{
+            border-color: #4B0082 transparent transparent transparent; /* Màu mũi tên */
+        }
+        .highlight-6{
+            color: #fff; /* Màu chữ */
+            background-color: #4B0082; /* Màu nền nổi bật */
+        }
+
+          .tooltip .tooltiptext-7{
+            background-color: #8B00FF; /* Màu nền của số */
+        }
+        .tooltip .tooltiptext-7::after{
+            border-color: #8B00FF transparent transparent transparent; /* Màu mũi tên */
+        }
+        .highlight-7{
+            color: #fff; /* Màu chữ */
+            background-color: #8B00FF; /* Màu nền nổi bật */
+        }
+    </style>
+
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus iusto, perferendis, nisi corporis quod rerum recusandae esse sint nam, impedit itaque quis<span class="tooltip highlight highlight-1">Đỏ
+        <span class="tooltiptext tooltiptext-1">1</span>
+    </span> laudantium deleniti saepe alias eius odit sed officia!
+    Praesentium <span class="tooltip highlight highlight-2">Cam
+        <span class="tooltiptext tooltiptext-2">2</span>
+    </span>provident excepturi optio possimus tempore nemo enim quam quidem quod iste aliquam, <span class="tooltip highlight highlight-3">Vàng
+        <span class="tooltiptext tooltiptext-3">3</span></span>eveniet dolorum quia harum veniam dolorem <span class="tooltip highlight highlight-4">Lục
+        <span class="tooltiptext tooltiptext-4">4</span></span>ab vel omnis aperiam illo veritatis. Delectus id nesciunt sapiente totam?
+    Lorem ipsum dolor, <span class="tooltip highlight highlight-5">Lam
+        <span class="tooltiptext tooltiptext-5">5</span></span> amet consectetur adipisicing elit. Beatae optio ipsa repudiandae! Nobis voluptate temporibus modi <span class="tooltip highlight highlight-6">Chàm
+        <span class="tooltiptext tooltiptext-6">6</span></span> ea dolorem inventore ipsa voluptatum, aliquam quod aut provident soluta omnis. <span class="tooltip highlight highlight-7">Tím
+        <span class="tooltiptext tooltiptext-7">7</span></span>
+    </span>Ea, in?
+    Deleniti iste facilis omnis tempore, dicta natus quisquam molestiae minus hic unde nam cum, eos, ad illo eaque? Quo natus sed dicta? Dolorum, voluptatum sit consequatur accusamus voluptatibus ratione eum!</p>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tooltip</title>
+        <style>
+
+            h1 {
+                padding: 0 0 20px 0;
+            }
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip .tooltip_text {
+                width: 120px;
+                position: absolute;
+                background-color: black;
+                color: #fff;
+                /* Có thể thay display: none thành visibility: hidden 
+                2 cái này khác nhau display thì phần bị ẩn không chiếm diện tích,
+                còn visibility thì nó chỉ ẩn text đi thôi còn vẫn chiếm diện tích đó.*/
+                visibility: hidden;
+                text-align: center;
+                border-radius: 6px;
+                padding: 5px 0;
+                /* top: -5px;
+                left: 105%; */
+                margin-left: -60px;
+                /* Cách khoảng cách dưới của tooltip chính bằng chiều cao của nó */
+                bottom: 150%; 
+                /* Cách khoảng cách trái của tooltip chính bằng một nửa chiều rộng của nó */
+                left: 50%;
+                opacity: 0;
+                transition: ease-in-out 0.5s;
+            }
+
+            .tooltip .tooltip_text::after {
+                content: " ";
+                position: absolute;
+                top: 100%;
+                left: 50%;
+                margin-left: -5px;
+                border-width: 5px;
+                /* border-style: solid; */
+                /* transparent: trong suốt */
+                border-color: black aqua;
+            }
+
+            .tooltip:hover .tooltip_text {
+                /* Có thể thay display: inline-block thành visibility: visible */
+                visibility: visible;
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body style="text-align: center;">
+        <div>
+            <h1>Cách Sử Dụng Tooltip</h1>
+            <div class="tooltip">Hover Over Me!
+                <div class="tooltip_text">Tooltip Text</div>
+            </div>
+        </div>
+    </body>
+</html>

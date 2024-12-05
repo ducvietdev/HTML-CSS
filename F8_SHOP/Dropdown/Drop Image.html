@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Drop Image</title>
+        <style>
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            .dropdown .img-small {
+                width: 10%;
+                height: 10%;
+            }
+
+            .dropdown-img {
+                display: none;
+                position: absolute;
+                box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.25);
+                min-width: 160px;
+            }
+
+            .dropdown-img .img-big {
+                width: 300px;
+                height: 200px;
+            }
+
+            .dropdown-img .drop-text {
+                padding: 15px;
+                text-align: center;
+            }
+
+            .dropdown:hover .dropdown-img {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Dropdown Image</h2>
+        <p>Move the mouse over the image below to open the dropdown content.</p>
+        <div class="dropdown">
+            <img class="img-small" src="https://anhdep123.com/wp-content/uploads/2020/05/h%C3%ACnh-%E1%BA%A3nh-phong-c%E1%BA%A3nh-%C4%91%E1%BA%B9p.jpg" alt="Thiên nhiên">
+            <div class="dropdown-img">
+                <img class="img-big" src="https://anhdep123.com/wp-content/uploads/2020/05/h%C3%ACnh-%E1%BA%A3nh-phong-c%E1%BA%A3nh-%C4%91%E1%BA%B9p.jpg" alt="Thiên nhiên">
+                <div class="drop-text">Beautiful Cinque Terre</div>
+            </div>
+        </div>
+    </body>
+</html>

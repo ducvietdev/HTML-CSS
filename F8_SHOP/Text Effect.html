@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Text Effect</title>
+        <style>
+            .p1 {
+                white-space: nowrap;
+                width: 200px;
+                border: 1px solid #000;
+                overflow: hidden;
+                text-overflow: clip;
+            }
+
+            .p2 {
+                white-space: nowrap;
+                width: 200px;
+                border: 1px solid #000;
+                overflow: hidden;
+                /* text-overflow: ellipsis; giống như overflow: hidden nhưng mà có thêm dấu "..."
+                Nó sẽ không được hiển thị kể cả khi mình sử dụng overflow auto */
+                text-overflow: ellipsis;
+            }
+
+            .p1:hover, .p2:hover {
+                overflow: visible;
+            }
+
+            .w1 {
+                width: 100px;
+                border: 1px solid #000;
+                word-wrap: break-word;
+            }
+
+            .b1 {
+                width: 100px;
+                border: 1px solid #000;
+                /* Đối với break-all nó sẽ viết đầy đủ dòng kể cả có hết từ hay không */
+                word-break: break-all;
+                /* Viết làm sao để các chữ cái của một chữ không bị tách ra 2 dòng khác nhau */
+                word-break: keep-all;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <!-- Text Overflow chỉ định nội dung tràn không được hiển thị -->
+            <p class="overflow p1">Thuộc tính overflow cho phép chúng ta làm gì</p>
+            <p class="overflow p2">Thuộc tính overflow cho phép chúng ta làm gì</p>
+
+            <!-- Word_Wrap làm cho từ ra khỏi khối đó bị cuộn xuống dòng tiếp theo xuống dòng tiếp theo -->
+            <p class="wrap w1">Con người là sinh vật tiênnnnnnnnniiiii tiến trên thế giớiiiiiinnnnn</p>
+
+            <!-- Word_Break -->
+            <p class="break b1">Con người là sinh vật tiên tiến trên thế giới</p>
+
+            <!-- Writing Mode -->
+        </div>
+    </body>
+</html>

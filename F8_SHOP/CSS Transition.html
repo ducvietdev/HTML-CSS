@@ -1,0 +1,79 @@
+<!-- 
+    ease - chỉ định hiệu ứng chuyển tiếp với khởi động chậm, sau đó nhanh, sau đó kết thúc từ từ (đây là mặc định)
+    linear - chỉ định hiệu ứng chuyển tiếp với cùng tốc độ từ đầu đến cuối
+    ease-in - chỉ định hiệu ứng chuyển tiếp với khởi động chậm
+    ease-out - chỉ định hiệu ứng chuyển tiếp với kết thúc chậm
+    ease-in-out - chỉ định hiệu ứng chuyển tiếp với khởi động và kết thúc chậm
+    cubic-bezier(n,n,n,n) - cho phép bạn xác định các giá trị của riêng bạn trong một hàm cubic-bezier
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Transition</title>
+        <style>
+            .box {
+                width: 200px;
+                height: 200px;
+                background-color: blue;
+                transition: ease-in-out 1s, ease-in-out 1s;
+                /* Trì hoãn thực hiện chuyển tiếp */
+                transition-delay: 0.5s;
+            }
+
+            .box:hover {
+                width: 400px;
+                height: 400px;
+            }  
+
+            .box2 {
+                width: 100px;
+                height: 100px;
+                background-color: red;
+                /* Chuyển tiếp + chuyển đổi */
+                transition: width 2s, height 2s, transform 2s ;
+            }
+
+            .box2:hover {
+                width: 300px;
+                height: 300px;
+                transform: rotate(180deg);
+            }
+
+            /* Thực hiện rõ các lệnh chuyển tiếp  */
+            .box3 {
+                width: 200px;
+                height: 200px;
+                background-color: green;
+                /* Thuộc tính bị chuyển tiếp */
+                transition-property: width;
+                /* Khoảng thời gian chuyển đổi */
+                transition-duration: 1.5s;
+                /* Kiểu chuyển tiếp */
+                transition-timing-function: linear;
+                transition-delay: 0.5s;
+
+                /* Cách viết tắt các thuộc tính trên
+                transition: width 1.5s linear 0.5s */
+            }
+
+            .box3:hover {
+                width: 300px;
+            }
+        </style>
+    </head>
+    <body>
+       <div class="box">
+
+       </div> 
+       <div class="box2">
+
+       </div>
+       <div class="box3">
+
+       </div>
+    </body>
+</html>

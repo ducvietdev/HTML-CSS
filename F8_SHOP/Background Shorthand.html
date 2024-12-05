@@ -1,0 +1,31 @@
+<!-- Đây là cách viết nhanh tất cả các thuộc tính của Bạckground -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Đệm, viền và khoảng lề</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+            html, body{
+                margin: 0;
+            }
+
+            .box{
+                width: 100%;
+                height: 100vh;
+                /* background-image: 
+                url(https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-g%C3%A1i-%C4%91%E1%BA%B9p-cute-819x1024.jpg);
+                background-size: 300px;
+                background-repeat: no-repeat;
+                background-position: bottom 20px right 20px; */
+
+                background: #333 url(https://scr.vn/wp-content/uploads/2020/08/H%C3%ACnh-g%C3%A1i-%C4%91%E1%BA%B9p-cute-819x1024.jpg) no-repeat center / contain;
+                /* Chú ý: background-size luôn viết cuối cùng và trước nó phải có dấu "/"*/
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+    </body>
+</html>

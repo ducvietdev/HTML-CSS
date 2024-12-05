@@ -1,0 +1,36 @@
+/* Ẩn đi phần tử display: none
+- display: block nó sẽ mở rộng hết chiều ngang của trang
+- display: inline giới hạn sẽ thu về đúng bằng phần tử đó
+và khi sử dụng inline thì sẽ không sử dụng được width và height
+- inline-block thì lai giữa 2 cái */
+
+
+.child{
+   width: 100px;
+   height: 100px;
+   background-color: red;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+/* .child{
+   display: inline-block;
+} */
+
+.parent{
+   display: flex;
+   /* Chọn chiều cho flex */
+   flex-direction: column; 
+   /* Căn theo chiều đã chọn */
+   justify-content: space-around;
+   /* Căn theo chiều còn lại */
+   align-items: center;
+   height: 500px;
+   background-color: deepskyblue;
+}
+
+.mid{
+   /* Căn chỉnh phần tử riêng */
+   align-self: flex-start;
+}

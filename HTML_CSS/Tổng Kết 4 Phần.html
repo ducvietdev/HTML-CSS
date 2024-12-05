@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Overview</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="official.css">
+        <style>
+            .box{
+                width: 25%;
+                height: 200px;
+                background-color: blue;
+                border: 5px solid #333;
+                padding: 10px;
+                box-sizing: border-box;
+          
+            }
+
+            .box{
+                box-sizing: unset;
+            }
+
+            h1:hover{
+                color: red;
+            }
+
+            .box:active{
+                background-color: green;
+            }
+
+            /* li:first-child{
+                color: brown;
+            }
+
+            li:last-child{
+                color: blueviolet;
+            } */
+
+            #player_name::first-letter{
+                font-size: 30px;
+            }
+
+            h1::first-line{
+                font-size: 40px;
+            }
+
+            ::selection{
+                background-color: black;
+            }
+
+            a{
+                font-size: 20px;
+            }
+
+            a::after{
+                content: "("attr(href)")";
+            }
+
+            .box::before{
+                content: "Reus";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                /* display: block; */
+                width: 50%;
+                height: 50%;
+                background-color: aqua;
+                border: 2px dashed #444;
+            }
+
+            .box::after{
+                content: "Kross";
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 30px;
+                /* display: block; */
+                width: 50%;
+                height: 50%;
+                background-color: rgb(255, 0, 255);
+                border: 2px dashed #444;
+    
+            }
+
+            input:checked{
+                width: 50px;
+                height: 50px;
+            }
+
+            a{
+                /* Bỏ gạch dưới đường link */
+                text-decoration: none; 
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="box" title="Đây là box nhiều màu"></div>
+        <div>
+            <h1>Ôn lại những cái đã học <br> trong 4 phần đầu của CSS</h1>
+            <h2 id="player_name">Tên cầu thủ yêu thích của Việt Đức</h2>
+            <ol>
+                <li>Cristiano Ronaldo - CR7</li>
+                <li>Marco Reus - 11</li>
+                <li>Toni Kross - 8</li>
+                <li>Robert Lewandoski - 9</li>
+                <li>Josua Kimmich - 6</li>
+                <li>Manuel Neuer - 1</li>
+                <li>Nemanja Vidic - 18</li>
+            </ol>
+            <h3 class="dis_player"><u>Tên cầu thủ mà Việt Đức ghét</u></h3>
+            <ul>
+                <li class="first_player p1">Dimitri Payet</li>
+                <li class="second_player p2">Son Hong Min</li>
+                <li class="fisrt_player p1">Zalatan Ibrahimovic</li>
+                <li class="second_player p2">Carlos Tevez</li>
+                <li class="third_player p3">Pepe</li>
+            </ul>
+            <form action="">
+                <div>
+                    <label for="title"><strong>Cầu thủ: </strong></label>
+                    <input type="text" placeholder="Nhập vào tên cầu thủ">
+                    <button>Tìm kiếm</button>
+                </div>
+            </form>
+            <h4><i>Thần Tượng</i></h4>
+            <img style="border: 2px dashed #444;" title="Marco Reus" width="50%" src="https://bestmeladermcreamreviews.com/wp-content/uploads/2020/08/Marco-reus-1.png" alt="Marco Reus">
+            <img style="border: 2px dashed #444;" title="Toni Kross" width="50%" src="https://i1-thethao.vnecdn.net/2021/06/30/E5ElAzZWQAUPMu8-jpeg-9640-1625028592.jpg?w=1020&h=0&q=100&dpr=1&fit=crop&s=TtE4IMghntsjQyB64IKIog" alt="Toni Kross">
+            <img style="border: 2px dashed #444;" title="Mesut Ozil" width="50%" src="https://phantichkeo.net/wp-content/uploads/2021/03/cau-thu-ozil-e1616753705704.jpg" alt="Mesut Ozil">
+            <form action="">
+                <div>
+                    <label for="title"><strong><u>Cầu thủ bạn yêu thích nhất: </u></strong></label>
+                    <input name="player_favourite" type="radio">
+                    <input name="player_favourite" type="radio">
+                    <input name="player_favourite" type="radio">
+                </div>
+            </form>
+            <a title="Link" href="https://webthethao.vn/bong-da-anh/doi-hinh-mu-20212022-danh-sach-so-ao-cau-thu-chi-tiet-9szsnJm7g.htm"><br>Cầu thủ bóng đá</a>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+h1{
+    color: red;
+}
+
+/* operator ">" là để truyền đến các thẻ con của thẻ cha */
+/* .list > li{
+    color: blue;
+} */
+
+.title{
+    font-size: 40px;
+}
+
+/* operator "+" tức là cái nào nằm liền kề thì sẽ được CSS */
+.title + .demo{
+    color: yellow;
+}
+
+/* operator "~" tức là không cần nằm liền kề mà nằm cùng cấp thì sẽ được CSS */
+.title ~ .demo{
+    color: brown;
+}
+
+/* "^" là bắt đầu, "$" là kết thúc, "*" là có chứa 
+Tìm một thẻ div mà có attr là style và chứa dấu : */
+div[style*=":"]{
+    color: violet;
+}
+
+input[type="text"]{
+    color: aqua;
+}
+
+/* không phải thẻ li đầu tiên */
+.header_list li:not(:first-child){
+    color: blueviolet;
+}

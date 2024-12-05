@@ -1,0 +1,31 @@
+<!-- Giải quyết vấn đề trong một box mà có chữ nếu muốn chữ nó cách ra lề box
+     thì ta sẽ thêm các thuộc tính như là padding, border 
+     nhưng lại không muốn thay đổi kích thước của box thì chúng ta sử dụng box-sizing -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Box-Sizing</title>
+        <meta charset="utf8">
+        <style>
+            .box{
+                /* content: "Đây là box-sizing"; */
+                width: 100px;
+                height: 100px;
+                display: block;
+                color: black;
+                background-color: blue;
+                padding: 20px;
+                border: 5px solid #333;
+                box-sizing: border-box;
+            }
+
+            /* .box{
+                box-sizing: unset;
+            } */
+        </style>
+    </head>
+    <body>
+        <div class="box">Đây là box-sizing</div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>F8 - Shop</title>
+        <meta charset="utf8">
+        <link rel="stylesheet" href="main.css">
+        <style>
+           
+            .box{
+                width: 50vw;
+                height: 40vh;
+                background-color: rgb(255, 0, 0);
+            }
+
+            /* :hover là khi mình chạm vào phần tử thì nó thể hiện thuộc tính */
+            h1:hover{
+                color: blue;
+            }
+
+            /* :active là khi mình nhấn vào phần tử thì nó mới thể hiện thuộc tính */
+            .box:active{
+                background-color: blueviolet;
+            }
+
+            /* Trong nhiều phần tử con thì thể hiện thuộc tính với phần tử đầu tiên */
+            li:first-child{
+                color: green;
+            }
+
+            /* Trong nhiều phần tử con thì thể hiện thuộc tính với phần tử cuối cùng */
+            li:last-child{
+                color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box"></div>
+        <div>
+            <h1>CSS Pseudo Class</h1>
+            <h2 class="demo">Demo Pseudo</h2>
+            <ul>
+                <li>:root</li>
+                <li>:hover</li>
+                <li>:active</li>
+                <li>:first-child</li>
+                <li>:last-child</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

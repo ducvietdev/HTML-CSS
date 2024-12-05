@@ -1,0 +1,6 @@
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+        background-color: gray;
+    }
+}

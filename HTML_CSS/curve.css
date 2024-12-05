@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    outline: none;
+    font-size: 12px;
+    line-height: 1.5;
+    font-family: "Poppins", sans-serif;
+    padding: 20px;
+}
+
+.menu {
+    background-color: #182738;
+    padding: 50px 0 15px 15px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.menu-item {
+    padding: 15px;
+    border-radius: 12px 0 0 12px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+/* Dùng JS để chạm vào tạo bo góc, không nên dùng active 
+vì khi chạm vào có độ giật sẽ lộ ra hình tròn bị trùng màu nền */
+
+.menu-item.active::before {
+    content: "";
+    position: absolute;
+    background-color: #18273b;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    right: 0;
+    border-radius: 50%;
+    transform: translateY(-100%);
+    box-shadow: 10px 10px 0 #fff;
+}
+
+.menu-item.active::after {
+    content: "";
+    position: absolute;
+    background-color: #18273b;
+    width: 20px;
+    height: 20px;
+    bottom: 0;
+    right: 0;
+    border-radius: 50%;
+    transform: translateY(100%);
+    box-shadow: 10px -10px 0 #fff;
+}
+
+.menu-item.active {
+    background-color: #fff;
+    color: #6a5af9;
+}
+
+.menu-item span {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* Sử dụng kết hợp photoshop hoặc phần mềm gì đấy để tạo ý tưởng bo góc */

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Funny Ghost</title>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                background-color: #333;
+            }
+
+            .ghost {
+                width: 100px;
+                height: 120px;
+                background-color: #fff;
+                border-radius: 100px 100px 0 0;
+                margin: 50px;
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                animation: ghost 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) alternate infinite;
+            }
+
+            .ghost::after {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 100rem;
+                left: -10px;
+                box-shadow: 100px 0 0 0 #fff;
+                animation: ghost 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.8) alternate infinite;
+            }
+            /* Cách dài không tối ưu khi tạo 2 cái tai nên sử dụng box-shadow */
+            /* .ghost::after {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                top: 40px;
+                left: -7px;
+            }
+
+            .ghost::before {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                top: 40px;
+                right: -7px;
+            } */
+
+            .ghost::before {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                width: 20px;
+                height: 20px;
+                bottom: 0;  
+                left: 0;
+                /* Đẩy xuống bằng một nửa chính nó */
+                transform: translateY(50%);
+                border-radius: 0 0 100rem 100rem;
+                /* Nhân lên nhiều chân dùng box-shadow */
+                box-shadow: 20px 0 0 0 #fff, 40px 0 0 0 #fff, 60px 0 0 0 #fff, 80px 0 0 0 #fff;
+            }
+
+            .ghost-body {
+                width: 100%;
+                max-width: 50%;
+                height: 50px;
+            }
+
+            .ghost-eyes {
+                width: 20px;
+                height: 20px;
+                background-color: #333;
+                border-radius: 50%;
+                box-shadow: 30px 0 0 0 #333;
+            }
+
+            .ghost-mouth {
+                width: 100%;
+                max-width: 80%;
+                height: 20px;
+                margin: 10px auto 0;
+                background-color: #333;
+                border-radius: 0 0 100rem 100rem;
+                position: relative;
+            }
+
+            .ghost-mouth::before {
+                content: "";
+                position: absolute;
+                background-color: #fff;
+                width: 5px;
+                height: 5px;
+                left: 30%;
+            }
+
+            @keyframes ghost {
+                to {
+                    transform: translateY(30%);
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="ghost">
+            <div class="ghost-body">
+                <div class="ghost-eyes"></div>
+                <div class="ghost-mouth"></div>
+            </div>
+        </div>
+    </body>
+</html>
